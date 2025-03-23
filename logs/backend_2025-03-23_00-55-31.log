@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/darshan/Projects/gem_chat/server-python/app.py", line 134, in <module>
+    @app.route('/chat', methods=['POST'])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darshan/.pyenv/versions/3.12.2/lib/python3.12/site-packages/flask/scaffold.py", line 435, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/Users/darshan/.pyenv/versions/3.12.2/lib/python3.12/site-packages/flask/scaffold.py", line 50, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/darshan/.pyenv/versions/3.12.2/lib/python3.12/site-packages/flask/app.py", line 1059, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: chat

@@ -1,0 +1,17 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.0.0.96:9000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 139-524-174
+127.0.0.1 - - [23/Mar/2025 01:09:16] "[33mHEAD / HTTP/1.1[0m" 404 -
+127.0.0.1 - - [23/Mar/2025 01:09:27] "[33mHEAD /api/status HTTP/1.1[0m" 404 -
+127.0.0.1 - - [23/Mar/2025 01:13:46] "HEAD /market-data HTTP/1.1" 200 -
+127.0.0.1 - - [23/Mar/2025 01:13:56] "GET /market-data HTTP/1.1" 200 -
+127.0.0.1 - - [23/Mar/2025 01:15:37] "HEAD /market-data HTTP/1.1" 200 -
+/Users/darshan/.pyenv/versions/3.12.2/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

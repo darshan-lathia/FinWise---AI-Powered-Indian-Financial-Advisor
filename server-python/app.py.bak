@@ -1,0 +1,230 @@
+from flask import Flask, request, Response, stream_with_context
+from flask_cors import CORS
+import os
+import google.generativeai as genai
+from dotenv import load_dotenv
+import requests
+import json
+from datetime import datetime
+import pytz
+
+# Load environment variables
+load_dotenv()
+
+# Configure the Gemini API with your API key
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
+
+# Financial advisor system prompt
+FINANCIAL_ADVISOR_PROMPT = """
+You are an ethical financial advisor specializing in Indian markets. Your name is FinWise.
+Provide balanced, analytical advice based on real financial data and best practices.
+
+IMPORTANT: The user dislikes reading long responses. ALWAYS limit your answers to a maximum of 200 words.
+Your responses MUST follow this structure with exactly this markdown formatting:
+
+## 💡 Summary
+[Provide a concise summary of your advice in 50-100 words]
+
+## ⚠️ Disclaimer
+[Brief one-sentence disclaimer]
+
+## 🔍 Want to know more?
+- [First follow-up question]
+- [Second follow-up question]
+- [Third follow-up question if relevant]
+
+Focus on:
+- Long-term investment strategies aligned with the client's goals
+- Ethical investment considerations
+- Risk management and diversification
+- Indian tax implications and regulations
+- Market trends in BSE/NSE
+
+Keep your language simple, direct, and actionable. Never provide more than 200 words in total.
+"""
+
+# Cache for financial data to avoid excessive API calls
+market_data_cache = {
+    "timestamp": None,
+    "data": None,
+    "cache_expiry_seconds": 300  # Cache expires after 5 minutes
+}
+
+def get_indian_market_data():
+    """Fetch live data from Indian stock markets (NSE/BSE)"""
+    current_time = datetime.now(pytz.timezone('Asia/Kolkata'))
+    
+    # Check if cache is valid
+    if (market_data_cache["timestamp"] and
+        (current_time - market_data_cache["timestamp"]).total_seconds() < market_data_cache["cache_expiry_seconds"]):
+        return market_data_cache["data"]
+    
+    # For real implementation, replace with actual API calls to NSE/BSE data providers
+    # This is a placeholder using a public API for demo purposes
+    try:
+        # Fetch major Indian indices
+        nse_response = requests.get("https://api.polygon.io/v2/aggs/ticker/NSEI/prev?adjusted=true&apiKey=" + os.getenv("POLYGON_API_KEY", ""))
+        bse_response = requests.get("https://api.polygon.io/v2/aggs/ticker/SENSEX/prev?adjusted=true&apiKey=" + os.getenv("POLYGON_API_KEY", ""))
+        
+        # Fetch top gainers/losers - In a real app, you'd use appropriate APIs
+        # For demo, we'll simulate this data
+        top_gainers = [
+            {"symbol": "RELIANCE.NS", "change_percent": 2.45},
+            {"symbol": "TCS.NS", "change_percent": 1.78},
+            {"symbol": "HDFCBANK.NS", "change_percent": 1.65}
+        ]
+        
+        top_losers = [
+            {"symbol": "INFY.NS", "change_percent": -1.23},
+            {"symbol": "ICICIBANK.NS", "change_percent": -0.89},
+            {"symbol": "AXISBANK.NS", "change_percent": -0.72}
+        ]
+        
+        # Get currency rates
+        usd_inr = requests.get("https://open.er-api.com/v6/latest/USD")
+        
+        market_data = {
+            "indices": {
+                "nifty50": nse_response.json() if nse_response.status_code == 200 else {"c": 22000, "percent_change": 0.67},
+                "sensex": bse_response.json() if bse_response.status_code == 200 else {"c": 72500, "percent_change": 0.58}
+            },
+            "top_gainers": top_gainers,
+            "top_losers": top_losers,
+            "forex": {
+                "usd_inr": usd_inr.json()["rates"]["INR"] if usd_inr.status_code == 200 else 83.2
+            },
+            "timestamp": current_time.strftime("%Y-%m-%d %H:%M:%S IST")
+        }
+        
+        # Update cache
+        market_data_cache["timestamp"] = current_time
+        market_data_cache["data"] = market_data
+        
+        return market_data
+        
+    except Exception as e:
+        print(f"Error fetching market data: {str(e)}")
+        # Return fallback data if API calls fail
+        return {
+            "indices": {
+                "nifty50": {"c": 22000, "percent_change": 0.67},
+                "sensex": {"c": 72500, "percent_change": 0.58}
+            },
+            "top_gainers": top_gainers,
+            "top_losers": top_losers,
+            "forex": {
+                "usd_inr": 83.2
+            },
+            "timestamp": current_time.strftime("%Y-%m-%d %H:%M:%S IST")
+        }
+
+@app.route('/market-data', methods=['GET'])
+def market_data():
+    """API endpoint to get current market data"""
+    return get_indian_market_data()
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    """Handle chat requests and return complete responses with financial context"""
+    data = request.json
+    msg = data.get('chat', '')
+    chat_history = data.get('history', [])
+    
+    # Get current market data
+    market_data = get_indian_market_data()
+    
+    # Create context message with market data
+    market_context = f"""
+Current Indian Market Data ({market_data['timestamp']}):
+- Nifty 50: {market_data['indices']['nifty50']['c']} ({market_data['indices']['nifty50']['percent_change']}%)
+- Sensex: {market_data['indices']['sensex']['c']} ({market_data['indices']['sensex']['percent_change']}%)
+- USD/INR: {market_data['forex']['usd_inr']}
+
+Top Gainers:
+{', '.join([f"{g['symbol']}: +{g['change_percent']}%" for g in market_data['top_gainers']])}
+
+Top Losers:
+{', '.join([f"{l['symbol']}: {l['change_percent']}%" for l in market_data['top_losers']])}
+
+Provide concise financial advice (max 200 words) for this query: {msg}
+
+Remember to use the exact markdown format specified:
+## 💡 Summary
+## ⚠️ Disclaimer
+## 🔍 Want to know more? (follow-up questions as bullet points)
+"""
+
+    # Initialize the generative model
+    model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+    
+    # Start a chat session with the model using the provided history
+    chat_session = model.start_chat(history=chat_history)
+    
+    # If this is the first message, prepend the financial advisor prompt
+    if len(chat_history) == 0:
+        # Add system instructions
+        chat_session.send_message(FINANCIAL_ADVISOR_PROMPT)
+    
+    # Get a complete response with market context
+    response = chat_session.send_message(market_context)
+    
+    return {"text": response.text}
+
+@app.route('/stream', methods=['POST'])
+def stream():
+    """Handle chat requests and stream responses with financial context"""
+    data = request.json
+    msg = data.get('chat', '')
+    chat_history = data.get('history', [])
+    
+    # Get current market data
+    market_data = get_indian_market_data()
+    
+    # Create context message with market data
+    market_context = f"""
+Current Indian Market Data ({market_data['timestamp']}):
+- Nifty 50: {market_data['indices']['nifty50']['c']} ({market_data['indices']['nifty50']['percent_change']}%)
+- Sensex: {market_data['indices']['sensex']['c']} ({market_data['indices']['sensex']['percent_change']}%)
+- USD/INR: {market_data['forex']['usd_inr']}
+
+Top Gainers:
+{', '.join([f"{g['symbol']}: +{g['change_percent']}%" for g in market_data['top_gainers']])}
+
+Top Losers:
+{', '.join([f"{l['symbol']}: {l['change_percent']}%" for l in market_data['top_losers']])}
+
+Provide concise financial advice (max 200 words) for this query: {msg}
+
+Remember to use the exact markdown format specified:
+## 💡 Summary
+## 🎯 Key Points (as bullet points)
+## ⚠️ Disclaimer
+## 🔍 Want to know more? (follow-up questions as bullet points)
+"""
+
+    # Initialize the generative model
+    model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+    
+    # Start a chat session with the model using the provided history
+    chat_session = model.start_chat(history=chat_history)
+    
+    # If this is the first message, prepend the financial advisor prompt
+    if len(chat_history) == 0:
+        # Add system instructions (not streamed to client)
+        chat_session.send_message(FINANCIAL_ADVISOR_PROMPT)
+    
+    def generate():
+        # Get a streaming response with market context
+        response = chat_session.send_message(market_context, stream=True)
+        
+        for chunk in response:
+            yield f"{chunk.text}"
+    
+    return Response(stream_with_context(generate()), mimetype="text/event-stream")
+
+if __name__ == '__main__':
+    port = int(os.getenv("PORT", 9000))
+    app.run(debug=True, host='0.0.0.0', port=port) 

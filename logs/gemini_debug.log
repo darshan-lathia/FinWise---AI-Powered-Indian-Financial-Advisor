@@ -1,0 +1,91 @@
+2025-03-23 01:58:53,991 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 01:58:53,991 - finwise - INFO - Gemini API configured successfully
+2025-03-23 01:58:54,004 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 01:58:54,008 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 01:59:07,185 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 01:59:07,185 - finwise - INFO - Gemini API configured successfully
+2025-03-23 01:59:07,204 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.0.0.96:9000
+2025-03-23 01:59:07,205 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 01:59:07,205 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 01:59:07,415 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 01:59:07,415 - finwise - INFO - Gemini API configured successfully
+2025-03-23 01:59:07,429 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 01:59:07,433 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 02:00:09,674 - werkzeug - INFO -  * Detected change in '/Users/darshan/Projects/gem_chat/server-python/test_gemini.py', reloading
+2025-03-23 02:00:09,744 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 02:00:09,971 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:00:09,971 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:00:09,985 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 02:00:09,989 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 02:00:11,019 - werkzeug - INFO -  * Detected change in '/Users/darshan/Projects/gem_chat/server-python/test_gemini.py', reloading
+2025-03-23 02:00:11,094 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 02:00:11,312 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:00:11,312 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:00:11,325 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 02:00:11,329 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 02:01:30,217 - werkzeug - INFO -  * Detected change in '/Users/darshan/Projects/gem_chat/server-python/app.py', reloading
+2025-03-23 02:01:30,288 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 02:01:30,505 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:01:30,505 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:01:30,518 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 02:01:30,522 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 02:01:46,824 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:01:46,824 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:01:46,845 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.0.0.96:9000
+2025-03-23 02:01:46,845 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 02:01:46,845 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 02:01:47,055 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:01:47,056 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:01:47,068 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 02:01:47,073 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 02:02:43,006 - finwise - INFO - Chat request received: 'What are good mutual funds for long-term investment in India?'
+2025-03-23 02:02:43,071 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.polygon.io:443
+2025-03-23 02:02:43,324 - urllib3.connectionpool - DEBUG - https://api.polygon.io:443 "GET /v2/aggs/ticker/NSEI/prev?adjusted=true&apiKey= HTTP/1.1" 401 101
+2025-03-23 02:02:43,331 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.polygon.io:443
+2025-03-23 02:02:43,572 - urllib3.connectionpool - DEBUG - https://api.polygon.io:443 "GET /v2/aggs/ticker/SENSEX/prev?adjusted=true&apiKey= HTTP/1.1" 401 101
+2025-03-23 02:02:43,732 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): open.er-api.com:443
+2025-03-23 02:02:43,829 - urllib3.connectionpool - DEBUG - https://open.er-api.com:443 "GET /v6/latest/USD HTTP/1.1" 200 1625
+2025-03-23 02:02:43,836 - finwise - INFO - Initializing Gemini model
+2025-03-23 02:02:43,837 - finwise - INFO - Starting chat session
+2025-03-23 02:02:43,837 - finwise - INFO - Sending system prompt
+2025-03-23 02:02:43,837 - finwise - INFO - Sending message to Gemini with 30s timeout
+2025-03-23 02:02:45,347 - finwise - INFO - Gemini API call completed in 1.51 seconds
+2025-03-23 02:02:45,347 - finwise - INFO - System prompt accepted
+2025-03-23 02:02:45,347 - finwise - INFO - Sending market context and user query to Gemini
+2025-03-23 02:02:45,347 - finwise - INFO - Sending message to Gemini with 30s timeout
+2025-03-23 02:02:46,857 - finwise - INFO - Gemini API call completed in 1.51 seconds
+2025-03-23 02:02:46,857 - finwise - INFO - Received response from Gemini in 1.51 seconds (length: 900)
+2025-03-23 02:02:46,861 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 02:02:46] "POST /chat HTTP/1.1" 200 -
+2025-03-23 02:04:57,312 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:04:57,312 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:04:57,331 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.0.0.96:9000
+2025-03-23 02:04:57,331 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 02:04:57,331 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 02:04:57,544 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:04:57,544 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:04:57,556 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 02:04:57,561 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 02:07:27,829 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:07:27,829 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:07:29,114 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.0.0.96:9000
+2025-03-23 02:07:29,114 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 02:07:29,116 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 02:07:29,355 - finwise - INFO - API Key loaded: AIzaS...-RQ
+2025-03-23 02:07:29,355 - finwise - INFO - Gemini API configured successfully
+2025-03-23 02:07:29,366 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 02:07:29,371 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 02:09:22,681 - werkzeug - INFO -  * Detected change in '/Users/darshan/Projects/gem_chat/server-python/app.py', reloading
+2025-03-23 02:09:22,754 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 02:09:25,109 - werkzeug - INFO -  * Restarting with stat

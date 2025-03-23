@@ -1,0 +1,24 @@
+
+> gemini-chat-client@0.1.0 start
+> vite
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+  VITE v5.4.14  ready in 97 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://10.0.0.96:3000/
+12:43:31 PM [vite] hmr update /src/index.css
+12:43:50 PM [vite] hmr update /src/App.css
+12:43:52 PM [vite] hmr update /src/index.css
+12:46:23 PM [vite] hmr update /src/App.css
+12:46:38 PM [vite] hmr update /src/App.css
+12:49:02 PM [vite] hmr update /src/App.css
+12:51:29 PM [vite] hmr update /src/App.tsx
+12:51:50 PM [vite] http proxy error: /stream
+Error: socket hang up
+    at Socket.socketOnEnd (node:_http_client:542:25)
+    at Socket.emit (node:events:519:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+12:52:30 PM [vite] hmr update /src/App.tsx

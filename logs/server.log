@@ -1,0 +1,1302 @@
+2025-03-23 12:41:54,400 - __main__ - INFO - Starting server on port 9000
+ * Serving Flask app 'app'
+ * Debug mode: on
+2025-03-23 12:41:54,421 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://10.0.0.96:9000
+2025-03-23 12:41:54,421 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 12:41:54,422 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 12:41:54,633 - __main__ - INFO - Starting server on port 9000
+2025-03-23 12:41:54,645 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 12:41:54,650 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 12:42:09,006 - __main__ - INFO - [20250323-124209-43631964] New stream request received
+2025-03-23 12:42:09,006 - __main__ - INFO - [20250323-124209-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '73.158.72.252', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 73.158.72.252', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '93', 'Cf-Ray': '92506909ab1dfae7-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:42:09,006 - __main__ - INFO - [20250323-124209-43631964] Client IP: 127.0.0.1
+2025-03-23 12:42:09,006 - __main__ - INFO - [20250323-124209-43631964] Method: POST
+2025-03-23 12:42:09,007 - __main__ - INFO - [20250323-124209-43631964] Message length: 69
+2025-03-23 12:42:09,007 - __main__ - INFO - [20250323-124209-43631964] History items: 0
+2025-03-23 12:42:09,007 - __main__ - INFO - [20250323-124209-43631964] Fetching market data...
+2025-03-23 12:42:09,787 - __main__ - INFO - [20250323-124209-43631964] Market data fetched successfully
+2025-03-23 12:42:09,788 - __main__ - INFO - [20250323-124209-43631964] Market context prepared
+2025-03-23 12:42:09,788 - __main__ - INFO - [20250323-124209-43631964] Initializing Gemini model...
+2025-03-23 12:42:09,788 - __main__ - INFO - [20250323-124209-43631964] Generating content with Gemini...
+2025-03-23 12:42:11,339 - __main__ - INFO - [20250323-124209-43631964] Generated response length: 859
+2025-03-23 12:42:11,339 - __main__ - INFO - [20250323-124209-43631964] First 100 chars: Namaste!  The Indian market shows moderate growth.  For long-term wealth creation, diversify across 
+2025-03-23 12:42:11,339 - __main__ - INFO - [20250323-124209-43631964] Setting up response stream...
+2025-03-23 12:42:11,340 - __main__ - INFO - [20250323-124209-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:42:11,341 - __main__ - INFO - [20250323-124209-43631964] Starting stream with 18 chunks
+2025-03-23 12:42:11,341 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 1/18, size: 50
+2025-03-23 12:42:11,341 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:42:11] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:42:11,342 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 2/18, size: 50
+2025-03-23 12:42:11,342 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 3/18, size: 50
+2025-03-23 12:42:11,342 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 4/18, size: 50
+2025-03-23 12:42:11,343 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 5/18, size: 50
+2025-03-23 12:42:11,343 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 6/18, size: 50
+2025-03-23 12:42:11,343 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 7/18, size: 50
+2025-03-23 12:42:11,343 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 8/18, size: 50
+2025-03-23 12:42:11,343 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 9/18, size: 50
+2025-03-23 12:42:11,343 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 10/18, size: 50
+2025-03-23 12:42:11,343 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 11/18, size: 50
+2025-03-23 12:42:11,344 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 12/18, size: 50
+2025-03-23 12:42:11,344 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 13/18, size: 50
+2025-03-23 12:42:11,344 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 14/18, size: 50
+2025-03-23 12:42:11,344 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 15/18, size: 50
+2025-03-23 12:42:11,344 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 16/18, size: 50
+2025-03-23 12:42:11,344 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 17/18, size: 50
+2025-03-23 12:42:11,344 - __main__ - INFO - [20250323-124209-43631964] Sending chunk 18/18, size: 9
+2025-03-23 12:42:11,344 - __main__ - INFO - [20250323-124209-43631964] Stream completed successfully
+2025-03-23 12:42:11,357 - __main__ - INFO - [20250323-124211-43631964] New stream request received
+2025-03-23 12:42:11,357 - __main__ - INFO - [20250323-124211-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '93', 'Cf-Ray': '92506909ab1dfae7-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:42:11,357 - __main__ - INFO - [20250323-124211-43631964] Client IP: 127.0.0.1
+2025-03-23 12:42:11,357 - __main__ - INFO - [20250323-124211-43631964] Method: POST
+2025-03-23 12:42:11,357 - __main__ - INFO - [20250323-124211-43631964] Message length: 69
+2025-03-23 12:42:11,357 - __main__ - INFO - [20250323-124211-43631964] History items: 0
+2025-03-23 12:42:11,357 - __main__ - INFO - [20250323-124211-43631964] Fetching market data...
+2025-03-23 12:42:11,358 - __main__ - INFO - [20250323-124211-43631964] Market data fetched successfully
+2025-03-23 12:42:11,358 - __main__ - INFO - [20250323-124211-43631964] Market context prepared
+2025-03-23 12:42:11,358 - __main__ - INFO - [20250323-124211-43631964] Initializing Gemini model...
+2025-03-23 12:42:11,358 - __main__ - INFO - [20250323-124211-43631964] Generating content with Gemini...
+2025-03-23 12:42:12,657 - __main__ - INFO - [20250323-124211-43631964] Generated response length: 841
+2025-03-23 12:42:12,658 - __main__ - INFO - [20250323-124211-43631964] First 100 chars: Namaste!  FinWise here.  Given the current market upswing in the BSE/NSE,  consider diversifying you
+2025-03-23 12:42:12,658 - __main__ - INFO - [20250323-124211-43631964] Setting up response stream...
+2025-03-23 12:42:12,658 - __main__ - INFO - [20250323-124211-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:42:12,659 - __main__ - INFO - [20250323-124211-43631964] Starting stream with 17 chunks
+2025-03-23 12:42:12,659 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 1/17, size: 50
+2025-03-23 12:42:12,659 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:42:12] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:42:12,660 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 2/17, size: 50
+2025-03-23 12:42:12,660 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 3/17, size: 50
+2025-03-23 12:42:12,660 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 4/17, size: 50
+2025-03-23 12:42:12,660 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 5/17, size: 50
+2025-03-23 12:42:12,661 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 6/17, size: 50
+2025-03-23 12:42:12,661 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 7/17, size: 50
+2025-03-23 12:42:12,661 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 8/17, size: 50
+2025-03-23 12:42:12,661 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 9/17, size: 50
+2025-03-23 12:42:12,661 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 10/17, size: 50
+2025-03-23 12:42:12,661 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 11/17, size: 50
+2025-03-23 12:42:12,661 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 12/17, size: 50
+2025-03-23 12:42:12,661 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 13/17, size: 50
+2025-03-23 12:42:12,662 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 14/17, size: 50
+2025-03-23 12:42:12,662 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 15/17, size: 50
+2025-03-23 12:42:12,662 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 16/17, size: 50
+2025-03-23 12:42:12,662 - __main__ - INFO - [20250323-124211-43631964] Sending chunk 17/17, size: 41
+2025-03-23 12:42:12,662 - __main__ - INFO - [20250323-124211-43631964] Stream completed successfully
+2025-03-23 12:43:15,687 - __main__ - INFO - [20250323-124315-43631964] New stream request received
+2025-03-23 12:43:15,688 - __main__ - INFO - [20250323-124315-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '73.158.72.252', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa, 73.158.72.252', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '102', 'Cf-Ray': '92506aab0cdecf9f-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*'}
+2025-03-23 12:43:15,688 - __main__ - INFO - [20250323-124315-43631964] Client IP: 127.0.0.1
+2025-03-23 12:43:15,688 - __main__ - INFO - [20250323-124315-43631964] Method: POST
+2025-03-23 12:43:15,688 - __main__ - INFO - [20250323-124315-43631964] Message length: 78
+2025-03-23 12:43:15,688 - __main__ - INFO - [20250323-124315-43631964] History items: 0
+2025-03-23 12:43:15,688 - __main__ - INFO - [20250323-124315-43631964] Fetching market data...
+2025-03-23 12:43:15,689 - __main__ - INFO - [20250323-124315-43631964] Market data fetched successfully
+2025-03-23 12:43:15,689 - __main__ - INFO - [20250323-124315-43631964] Market context prepared
+2025-03-23 12:43:15,689 - __main__ - INFO - [20250323-124315-43631964] Initializing Gemini model...
+2025-03-23 12:43:15,689 - __main__ - INFO - [20250323-124315-43631964] Generating content with Gemini...
+2025-03-23 12:43:17,123 - __main__ - INFO - [20250323-124315-43631964] Generated response length: 825
+2025-03-23 12:43:17,123 - __main__ - INFO - [20250323-124315-43631964] First 100 chars: Namaste!  FinWise here.  In India, short-term capital gains (STCG) on equities (held for less than 1
+2025-03-23 12:43:17,123 - __main__ - INFO - [20250323-124315-43631964] Setting up response stream...
+2025-03-23 12:43:17,124 - __main__ - INFO - [20250323-124315-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:43:17,124 - __main__ - INFO - [20250323-124315-43631964] Starting stream with 17 chunks
+2025-03-23 12:43:17,124 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 1/17, size: 50
+2025-03-23 12:43:17,125 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:43:17] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:43:17,125 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 2/17, size: 50
+2025-03-23 12:43:17,125 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 3/17, size: 50
+2025-03-23 12:43:17,125 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 4/17, size: 50
+2025-03-23 12:43:17,125 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 5/17, size: 50
+2025-03-23 12:43:17,126 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 6/17, size: 50
+2025-03-23 12:43:17,126 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 7/17, size: 50
+2025-03-23 12:43:17,126 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 8/17, size: 50
+2025-03-23 12:43:17,126 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 9/17, size: 50
+2025-03-23 12:43:17,126 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 10/17, size: 50
+2025-03-23 12:43:17,126 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 11/17, size: 50
+2025-03-23 12:43:17,126 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 12/17, size: 50
+2025-03-23 12:43:17,126 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 13/17, size: 50
+2025-03-23 12:43:17,127 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 14/17, size: 50
+2025-03-23 12:43:17,127 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 15/17, size: 50
+2025-03-23 12:43:17,127 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 16/17, size: 50
+2025-03-23 12:43:17,127 - __main__ - INFO - [20250323-124315-43631964] Sending chunk 17/17, size: 25
+2025-03-23 12:43:17,127 - __main__ - INFO - [20250323-124315-43631964] Stream completed successfully
+2025-03-23 12:43:17,135 - __main__ - INFO - [20250323-124317-43631964] New stream request received
+2025-03-23 12:43:17,135 - __main__ - INFO - [20250323-124317-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '102', 'Cf-Ray': '92506aab0cdecf9f-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*'}
+2025-03-23 12:43:17,135 - __main__ - INFO - [20250323-124317-43631964] Client IP: 127.0.0.1
+2025-03-23 12:43:17,135 - __main__ - INFO - [20250323-124317-43631964] Method: POST
+2025-03-23 12:43:17,135 - __main__ - INFO - [20250323-124317-43631964] Message length: 78
+2025-03-23 12:43:17,136 - __main__ - INFO - [20250323-124317-43631964] History items: 0
+2025-03-23 12:43:17,136 - __main__ - INFO - [20250323-124317-43631964] Fetching market data...
+2025-03-23 12:43:17,136 - __main__ - INFO - [20250323-124317-43631964] Market data fetched successfully
+2025-03-23 12:43:17,136 - __main__ - INFO - [20250323-124317-43631964] Market context prepared
+2025-03-23 12:43:17,136 - __main__ - INFO - [20250323-124317-43631964] Initializing Gemini model...
+2025-03-23 12:43:17,136 - __main__ - INFO - [20250323-124317-43631964] Generating content with Gemini...
+2025-03-23 12:43:18,723 - __main__ - INFO - [20250323-124317-43631964] Generated response length: 877
+2025-03-23 12:43:18,723 - __main__ - INFO - [20250323-124317-43631964] First 100 chars: Namaste!  I'm FinWise.  In India, short-term capital gains (STCG) on equities held for less than a y
+2025-03-23 12:43:18,723 - __main__ - INFO - [20250323-124317-43631964] Setting up response stream...
+2025-03-23 12:43:18,724 - __main__ - INFO - [20250323-124317-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:43:18,724 - __main__ - INFO - [20250323-124317-43631964] Starting stream with 18 chunks
+2025-03-23 12:43:18,724 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 1/18, size: 50
+2025-03-23 12:43:18,724 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:43:18] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:43:18,725 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 2/18, size: 50
+2025-03-23 12:43:18,725 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 3/18, size: 50
+2025-03-23 12:43:18,725 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 4/18, size: 50
+2025-03-23 12:43:18,725 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 5/18, size: 50
+2025-03-23 12:43:18,726 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 6/18, size: 50
+2025-03-23 12:43:18,726 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 7/18, size: 50
+2025-03-23 12:43:18,726 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 8/18, size: 50
+2025-03-23 12:43:18,726 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 9/18, size: 50
+2025-03-23 12:43:18,726 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 10/18, size: 50
+2025-03-23 12:43:18,726 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 11/18, size: 50
+2025-03-23 12:43:18,726 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 12/18, size: 50
+2025-03-23 12:43:18,726 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 13/18, size: 50
+2025-03-23 12:43:18,727 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 14/18, size: 50
+2025-03-23 12:43:18,727 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 15/18, size: 50
+2025-03-23 12:43:18,727 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 16/18, size: 50
+2025-03-23 12:43:18,727 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 17/18, size: 50
+2025-03-23 12:43:18,727 - __main__ - INFO - [20250323-124317-43631964] Sending chunk 18/18, size: 27
+2025-03-23 12:43:18,727 - __main__ - INFO - [20250323-124317-43631964] Stream completed successfully
+2025-03-23 12:43:29,445 - __main__ - INFO - [20250323-124329-43631964] New stream request received
+2025-03-23 12:43:29,445 - __main__ - INFO - [20250323-124329-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.123', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa, 172.71.158.123', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '1112', 'Cf-Ray': '92506b010fbdcf9f-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*'}
+2025-03-23 12:43:29,445 - __main__ - INFO - [20250323-124329-43631964] Client IP: 127.0.0.1
+2025-03-23 12:43:29,446 - __main__ - INFO - [20250323-124329-43631964] Method: POST
+2025-03-23 12:43:29,446 - __main__ - INFO - [20250323-124329-43631964] Message length: 36
+2025-03-23 12:43:29,446 - __main__ - INFO - [20250323-124329-43631964] History items: 2
+2025-03-23 12:43:29,446 - __main__ - INFO - [20250323-124329-43631964] Fetching market data...
+2025-03-23 12:43:29,446 - __main__ - INFO - [20250323-124329-43631964] Market data fetched successfully
+2025-03-23 12:43:29,447 - __main__ - INFO - [20250323-124329-43631964] Market context prepared
+2025-03-23 12:43:29,447 - __main__ - INFO - [20250323-124329-43631964] Initializing Gemini model...
+2025-03-23 12:43:29,447 - __main__ - INFO - [20250323-124329-43631964] Generating content with Gemini...
+2025-03-23 12:43:30,722 - __main__ - INFO - [20250323-124329-43631964] Generated response length: 806
+2025-03-23 12:43:30,723 - __main__ - INFO - [20250323-124329-43631964] First 100 chars: Namaste!  I'm FinWise.  Given the current market showing moderate growth in the Nifty and Sensex,  a
+2025-03-23 12:43:30,723 - __main__ - INFO - [20250323-124329-43631964] Setting up response stream...
+2025-03-23 12:43:30,723 - __main__ - INFO - [20250323-124329-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:43:30,723 - __main__ - INFO - [20250323-124329-43631964] Starting stream with 17 chunks
+2025-03-23 12:43:30,724 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 1/17, size: 50
+2025-03-23 12:43:30,724 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:43:30] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:43:30,724 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 2/17, size: 50
+2025-03-23 12:43:30,724 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 3/17, size: 50
+2025-03-23 12:43:30,725 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 4/17, size: 50
+2025-03-23 12:43:30,725 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 5/17, size: 50
+2025-03-23 12:43:30,725 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 6/17, size: 50
+2025-03-23 12:43:30,725 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 7/17, size: 50
+2025-03-23 12:43:30,725 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 8/17, size: 50
+2025-03-23 12:43:30,725 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 9/17, size: 50
+2025-03-23 12:43:30,725 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 10/17, size: 50
+2025-03-23 12:43:30,726 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 11/17, size: 50
+2025-03-23 12:43:30,726 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 12/17, size: 50
+2025-03-23 12:43:30,726 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 13/17, size: 50
+2025-03-23 12:43:30,726 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 14/17, size: 50
+2025-03-23 12:43:30,726 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 15/17, size: 50
+2025-03-23 12:43:30,726 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 16/17, size: 50
+2025-03-23 12:43:30,726 - __main__ - INFO - [20250323-124329-43631964] Sending chunk 17/17, size: 6
+2025-03-23 12:43:30,727 - __main__ - INFO - [20250323-124329-43631964] Stream completed successfully
+2025-03-23 12:43:30,733 - __main__ - INFO - [20250323-124330-43631964] New stream request received
+2025-03-23 12:43:30,733 - __main__ - INFO - [20250323-124330-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '1112', 'Cf-Ray': '92506b010fbdcf9f-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*'}
+2025-03-23 12:43:30,733 - __main__ - INFO - [20250323-124330-43631964] Client IP: 127.0.0.1
+2025-03-23 12:43:30,733 - __main__ - INFO - [20250323-124330-43631964] Method: POST
+2025-03-23 12:43:30,733 - __main__ - INFO - [20250323-124330-43631964] Message length: 36
+2025-03-23 12:43:30,734 - __main__ - INFO - [20250323-124330-43631964] History items: 2
+2025-03-23 12:43:30,734 - __main__ - INFO - [20250323-124330-43631964] Fetching market data...
+2025-03-23 12:43:30,734 - __main__ - INFO - [20250323-124330-43631964] Market data fetched successfully
+2025-03-23 12:43:30,734 - __main__ - INFO - [20250323-124330-43631964] Market context prepared
+2025-03-23 12:43:30,734 - __main__ - INFO - [20250323-124330-43631964] Initializing Gemini model...
+2025-03-23 12:43:30,734 - __main__ - INFO - [20250323-124330-43631964] Generating content with Gemini...
+2025-03-23 12:43:32,218 - __main__ - INFO - [20250323-124330-43631964] Generated response length: 881
+2025-03-23 12:43:32,219 - __main__ - INFO - [20250323-124330-43631964] First 100 chars: Namaste! I'm FinWise.  Given the current market conditions, a long-term investment strategy in India
+2025-03-23 12:43:32,219 - __main__ - INFO - [20250323-124330-43631964] Setting up response stream...
+2025-03-23 12:43:32,219 - __main__ - INFO - [20250323-124330-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:43:32,220 - __main__ - INFO - [20250323-124330-43631964] Starting stream with 18 chunks
+2025-03-23 12:43:32,220 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 1/18, size: 50
+2025-03-23 12:43:32,220 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:43:32] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:43:32,221 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 2/18, size: 50
+2025-03-23 12:43:32,221 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 3/18, size: 50
+2025-03-23 12:43:32,221 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 4/18, size: 50
+2025-03-23 12:43:32,221 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 5/18, size: 50
+2025-03-23 12:43:32,221 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 6/18, size: 50
+2025-03-23 12:43:32,221 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 7/18, size: 50
+2025-03-23 12:43:32,221 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 8/18, size: 50
+2025-03-23 12:43:32,222 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 9/18, size: 50
+2025-03-23 12:43:32,222 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 10/18, size: 50
+2025-03-23 12:43:32,222 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 11/18, size: 50
+2025-03-23 12:43:32,222 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 12/18, size: 50
+2025-03-23 12:43:32,222 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 13/18, size: 50
+2025-03-23 12:43:32,222 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 14/18, size: 50
+2025-03-23 12:43:32,222 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 15/18, size: 50
+2025-03-23 12:43:32,222 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 16/18, size: 50
+2025-03-23 12:43:32,223 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 17/18, size: 50
+2025-03-23 12:43:32,223 - __main__ - INFO - [20250323-124330-43631964] Sending chunk 18/18, size: 31
+2025-03-23 12:43:32,223 - __main__ - INFO - [20250323-124330-43631964] Stream completed successfully
+2025-03-23 12:43:55,752 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:43:55,753 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:43:55] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:43:56,012 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:43:56,013 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:43:56] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:44:05,614 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:44:05,615 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:05] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:44:11,891 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:44:11,892 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:11] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:44:11,914 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:44:11,914 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:11] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:44:13,276 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:44:13,277 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:13] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:44:13,281 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:44:13,281 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:13] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:44:20,255 - __main__ - INFO - [20250323-124420-43631964] New stream request received
+2025-03-23 12:44:20,256 - __main__ - INFO - [20250323-124420-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.137', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.158.137', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '85', 'Cf-Ray': '92506c3e9e5dcf9b-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:44:20,256 - __main__ - INFO - [20250323-124420-43631964] Client IP: 127.0.0.1
+2025-03-23 12:44:20,256 - __main__ - INFO - [20250323-124420-43631964] Method: POST
+2025-03-23 12:44:20,256 - __main__ - INFO - [20250323-124420-43631964] Message length: 61
+2025-03-23 12:44:20,256 - __main__ - INFO - [20250323-124420-43631964] History items: 0
+2025-03-23 12:44:20,257 - __main__ - INFO - [20250323-124420-43631964] Fetching market data...
+2025-03-23 12:44:20,257 - __main__ - INFO - [20250323-124420-43631964] Market data fetched successfully
+2025-03-23 12:44:20,257 - __main__ - INFO - [20250323-124420-43631964] Market context prepared
+2025-03-23 12:44:20,257 - __main__ - INFO - [20250323-124420-43631964] Initializing Gemini model...
+2025-03-23 12:44:20,257 - __main__ - INFO - [20250323-124420-43631964] Generating content with Gemini...
+2025-03-23 12:44:21,598 - __main__ - INFO - [20250323-124420-43631964] Generated response length: 837
+2025-03-23 12:44:21,598 - __main__ - INFO - [20250323-124420-43631964] First 100 chars: Namaste!  FinWise here.  For long-term growth in the Indian market (Nifty 50 at 22000, Sensex at 725
+2025-03-23 12:44:21,598 - __main__ - INFO - [20250323-124420-43631964] Setting up response stream...
+2025-03-23 12:44:21,599 - __main__ - INFO - [20250323-124420-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:44:21,599 - __main__ - INFO - [20250323-124420-43631964] Starting stream with 17 chunks
+2025-03-23 12:44:21,599 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 1/17, size: 50
+2025-03-23 12:44:21,599 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:21] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:44:21,600 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 2/17, size: 50
+2025-03-23 12:44:21,600 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 3/17, size: 50
+2025-03-23 12:44:21,600 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 4/17, size: 50
+2025-03-23 12:44:21,600 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 5/17, size: 50
+2025-03-23 12:44:21,600 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 6/17, size: 50
+2025-03-23 12:44:21,601 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 7/17, size: 50
+2025-03-23 12:44:21,601 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 8/17, size: 50
+2025-03-23 12:44:21,601 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 9/17, size: 50
+2025-03-23 12:44:21,601 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 10/17, size: 50
+2025-03-23 12:44:21,601 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 11/17, size: 50
+2025-03-23 12:44:21,601 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 12/17, size: 50
+2025-03-23 12:44:21,601 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 13/17, size: 50
+2025-03-23 12:44:21,601 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 14/17, size: 50
+2025-03-23 12:44:21,602 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 15/17, size: 50
+2025-03-23 12:44:21,602 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 16/17, size: 50
+2025-03-23 12:44:21,602 - __main__ - INFO - [20250323-124420-43631964] Sending chunk 17/17, size: 37
+2025-03-23 12:44:21,602 - __main__ - INFO - [20250323-124420-43631964] Stream completed successfully
+2025-03-23 12:44:21,610 - __main__ - INFO - [20250323-124421-43631964] New stream request received
+2025-03-23 12:44:21,610 - __main__ - INFO - [20250323-124421-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '85', 'Cf-Ray': '92506c3e9e5dcf9b-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:44:21,610 - __main__ - INFO - [20250323-124421-43631964] Client IP: 127.0.0.1
+2025-03-23 12:44:21,611 - __main__ - INFO - [20250323-124421-43631964] Method: POST
+2025-03-23 12:44:21,611 - __main__ - INFO - [20250323-124421-43631964] Message length: 61
+2025-03-23 12:44:21,611 - __main__ - INFO - [20250323-124421-43631964] History items: 0
+2025-03-23 12:44:21,611 - __main__ - INFO - [20250323-124421-43631964] Fetching market data...
+2025-03-23 12:44:21,611 - __main__ - INFO - [20250323-124421-43631964] Market data fetched successfully
+2025-03-23 12:44:21,611 - __main__ - INFO - [20250323-124421-43631964] Market context prepared
+2025-03-23 12:44:21,611 - __main__ - INFO - [20250323-124421-43631964] Initializing Gemini model...
+2025-03-23 12:44:21,611 - __main__ - INFO - [20250323-124421-43631964] Generating content with Gemini...
+2025-03-23 12:44:22,921 - __main__ - INFO - [20250323-124421-43631964] Generated response length: 862
+2025-03-23 12:44:22,922 - __main__ - INFO - [20250323-124421-43631964] First 100 chars: Namaste!  FinWise here.  For long-term growth in the Indian market, consider diversified equity mutu
+2025-03-23 12:44:22,922 - __main__ - INFO - [20250323-124421-43631964] Setting up response stream...
+2025-03-23 12:44:22,922 - __main__ - INFO - [20250323-124421-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:44:22,923 - __main__ - INFO - [20250323-124421-43631964] Starting stream with 18 chunks
+2025-03-23 12:44:22,923 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 1/18, size: 50
+2025-03-23 12:44:22,923 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:22] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:44:22,924 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 2/18, size: 50
+2025-03-23 12:44:22,924 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 3/18, size: 50
+2025-03-23 12:44:22,924 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 4/18, size: 50
+2025-03-23 12:44:22,924 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 5/18, size: 50
+2025-03-23 12:44:22,924 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 6/18, size: 50
+2025-03-23 12:44:22,924 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 7/18, size: 50
+2025-03-23 12:44:22,925 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 8/18, size: 50
+2025-03-23 12:44:22,925 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 9/18, size: 50
+2025-03-23 12:44:22,925 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 10/18, size: 50
+2025-03-23 12:44:22,925 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 11/18, size: 50
+2025-03-23 12:44:22,925 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 12/18, size: 50
+2025-03-23 12:44:22,925 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 13/18, size: 50
+2025-03-23 12:44:22,925 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 14/18, size: 50
+2025-03-23 12:44:22,925 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 15/18, size: 50
+2025-03-23 12:44:22,926 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 16/18, size: 50
+2025-03-23 12:44:22,926 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 17/18, size: 50
+2025-03-23 12:44:22,926 - __main__ - INFO - [20250323-124421-43631964] Sending chunk 18/18, size: 12
+2025-03-23 12:44:22,926 - __main__ - INFO - [20250323-124421-43631964] Stream completed successfully
+2025-03-23 12:44:40,954 - __main__ - INFO - [20250323-124440-43631964] New stream request received
+2025-03-23 12:44:40,954 - __main__ - INFO - [20250323-124440-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.123', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa, 172.71.158.123', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '93', 'Cf-Ray': '92506cbfac16cfb0-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*'}
+2025-03-23 12:44:40,954 - __main__ - INFO - [20250323-124440-43631964] Client IP: 127.0.0.1
+2025-03-23 12:44:40,954 - __main__ - INFO - [20250323-124440-43631964] Method: POST
+2025-03-23 12:44:40,955 - __main__ - INFO - [20250323-124440-43631964] Message length: 69
+2025-03-23 12:44:40,955 - __main__ - INFO - [20250323-124440-43631964] History items: 0
+2025-03-23 12:44:40,955 - __main__ - INFO - [20250323-124440-43631964] Fetching market data...
+2025-03-23 12:44:40,955 - __main__ - INFO - [20250323-124440-43631964] Market data fetched successfully
+2025-03-23 12:44:40,955 - __main__ - INFO - [20250323-124440-43631964] Market context prepared
+2025-03-23 12:44:40,956 - __main__ - INFO - [20250323-124440-43631964] Initializing Gemini model...
+2025-03-23 12:44:40,956 - __main__ - INFO - [20250323-124440-43631964] Generating content with Gemini...
+2025-03-23 12:44:42,180 - __main__ - INFO - [20250323-124440-43631964] Generated response length: 763
+2025-03-23 12:44:42,181 - __main__ - INFO - [20250323-124440-43631964] First 100 chars: Namaste!  FinWise here.  The Indian market shows moderate growth.  For long-term diversification, co
+2025-03-23 12:44:42,181 - __main__ - INFO - [20250323-124440-43631964] Setting up response stream...
+2025-03-23 12:44:42,181 - __main__ - INFO - [20250323-124440-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:44:42,182 - __main__ - INFO - [20250323-124440-43631964] Starting stream with 16 chunks
+2025-03-23 12:44:42,182 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 1/16, size: 50
+2025-03-23 12:44:42,182 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:42] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:44:42,182 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 2/16, size: 50
+2025-03-23 12:44:42,182 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 3/16, size: 50
+2025-03-23 12:44:42,183 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 4/16, size: 50
+2025-03-23 12:44:42,183 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 5/16, size: 50
+2025-03-23 12:44:42,183 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 6/16, size: 50
+2025-03-23 12:44:42,183 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 7/16, size: 50
+2025-03-23 12:44:42,183 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 8/16, size: 50
+2025-03-23 12:44:42,183 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 9/16, size: 50
+2025-03-23 12:44:42,183 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 10/16, size: 50
+2025-03-23 12:44:42,184 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 11/16, size: 50
+2025-03-23 12:44:42,184 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 12/16, size: 50
+2025-03-23 12:44:42,184 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 13/16, size: 50
+2025-03-23 12:44:42,184 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 14/16, size: 50
+2025-03-23 12:44:42,184 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 15/16, size: 50
+2025-03-23 12:44:42,184 - __main__ - INFO - [20250323-124440-43631964] Sending chunk 16/16, size: 13
+2025-03-23 12:44:42,184 - __main__ - INFO - [20250323-124440-43631964] Stream completed successfully
+2025-03-23 12:44:42,191 - __main__ - INFO - [20250323-124442-43631964] New stream request received
+2025-03-23 12:44:42,192 - __main__ - INFO - [20250323-124442-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '93', 'Cf-Ray': '92506cbfac16cfb0-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?0', 'Accept': '*/*'}
+2025-03-23 12:44:42,192 - __main__ - INFO - [20250323-124442-43631964] Client IP: 127.0.0.1
+2025-03-23 12:44:42,192 - __main__ - INFO - [20250323-124442-43631964] Method: POST
+2025-03-23 12:44:42,192 - __main__ - INFO - [20250323-124442-43631964] Message length: 69
+2025-03-23 12:44:42,192 - __main__ - INFO - [20250323-124442-43631964] History items: 0
+2025-03-23 12:44:42,192 - __main__ - INFO - [20250323-124442-43631964] Fetching market data...
+2025-03-23 12:44:42,192 - __main__ - INFO - [20250323-124442-43631964] Market data fetched successfully
+2025-03-23 12:44:42,193 - __main__ - INFO - [20250323-124442-43631964] Market context prepared
+2025-03-23 12:44:42,193 - __main__ - INFO - [20250323-124442-43631964] Initializing Gemini model...
+2025-03-23 12:44:42,193 - __main__ - INFO - [20250323-124442-43631964] Generating content with Gemini...
+2025-03-23 12:44:43,481 - __main__ - INFO - [20250323-124442-43631964] Generated response length: 869
+2025-03-23 12:44:43,481 - __main__ - INFO - [20250323-124442-43631964] First 100 chars: Namaste!  The Indian market shows positive growth, but diversification is key.  Given the current sc
+2025-03-23 12:44:43,482 - __main__ - INFO - [20250323-124442-43631964] Setting up response stream...
+2025-03-23 12:44:43,482 - __main__ - INFO - [20250323-124442-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:44:43,482 - __main__ - INFO - [20250323-124442-43631964] Starting stream with 18 chunks
+2025-03-23 12:44:43,482 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 1/18, size: 50
+2025-03-23 12:44:43,483 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:44:43] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:44:43,483 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 2/18, size: 50
+2025-03-23 12:44:43,483 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 3/18, size: 50
+2025-03-23 12:44:43,484 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 4/18, size: 50
+2025-03-23 12:44:43,484 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 5/18, size: 50
+2025-03-23 12:44:43,484 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 6/18, size: 50
+2025-03-23 12:44:43,484 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 7/18, size: 50
+2025-03-23 12:44:43,484 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 8/18, size: 50
+2025-03-23 12:44:43,484 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 9/18, size: 50
+2025-03-23 12:44:43,484 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 10/18, size: 50
+2025-03-23 12:44:43,485 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 11/18, size: 50
+2025-03-23 12:44:43,485 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 12/18, size: 50
+2025-03-23 12:44:43,485 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 13/18, size: 50
+2025-03-23 12:44:43,485 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 14/18, size: 50
+2025-03-23 12:44:43,485 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 15/18, size: 50
+2025-03-23 12:44:43,485 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 16/18, size: 50
+2025-03-23 12:44:43,485 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 17/18, size: 50
+2025-03-23 12:44:43,485 - __main__ - INFO - [20250323-124442-43631964] Sending chunk 18/18, size: 19
+2025-03-23 12:44:43,486 - __main__ - INFO - [20250323-124442-43631964] Stream completed successfully
+2025-03-23 12:46:47,279 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:46:47,281 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:46:47] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:46:47,443 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:46:47,444 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:46:47] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:47:27,954 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:47:27,955 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:47:27] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:47:31,197 - __main__ - INFO - [20250323-124731-43631964] New stream request received
+2025-03-23 12:47:31,197 - __main__ - INFO - [20250323-124731-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.154.215', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.154.215', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '93', 'Cf-Ray': '925070e7ec8ff963-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:47:31,198 - __main__ - INFO - [20250323-124731-43631964] Client IP: 127.0.0.1
+2025-03-23 12:47:31,198 - __main__ - INFO - [20250323-124731-43631964] Method: POST
+2025-03-23 12:47:31,198 - __main__ - INFO - [20250323-124731-43631964] Message length: 69
+2025-03-23 12:47:31,198 - __main__ - INFO - [20250323-124731-43631964] History items: 0
+2025-03-23 12:47:31,198 - __main__ - INFO - [20250323-124731-43631964] Fetching market data...
+2025-03-23 12:47:31,839 - __main__ - INFO - [20250323-124731-43631964] Market data fetched successfully
+2025-03-23 12:47:31,839 - __main__ - INFO - [20250323-124731-43631964] Market context prepared
+2025-03-23 12:47:31,840 - __main__ - INFO - [20250323-124731-43631964] Initializing Gemini model...
+2025-03-23 12:47:31,840 - __main__ - INFO - [20250323-124731-43631964] Generating content with Gemini...
+2025-03-23 12:47:33,396 - __main__ - INFO - [20250323-124731-43631964] Generated response length: 970
+2025-03-23 12:47:33,397 - __main__ - INFO - [20250323-124731-43631964] First 100 chars: Namaste!  FinWise here.  With the Nifty and Sensex showing positive growth, it's a good time to revi
+2025-03-23 12:47:33,397 - __main__ - INFO - [20250323-124731-43631964] Setting up response stream...
+2025-03-23 12:47:33,397 - __main__ - INFO - [20250323-124731-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:47:33,398 - __main__ - INFO - [20250323-124731-43631964] Starting stream with 20 chunks
+2025-03-23 12:47:33,398 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 1/20, size: 50
+2025-03-23 12:47:33,398 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:47:33] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:47:33,398 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 2/20, size: 50
+2025-03-23 12:47:33,399 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 3/20, size: 50
+2025-03-23 12:47:33,399 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 4/20, size: 50
+2025-03-23 12:47:33,399 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 5/20, size: 50
+2025-03-23 12:47:33,399 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 6/20, size: 50
+2025-03-23 12:47:33,399 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 7/20, size: 50
+2025-03-23 12:47:33,399 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 8/20, size: 50
+2025-03-23 12:47:33,399 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 9/20, size: 50
+2025-03-23 12:47:33,400 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 10/20, size: 50
+2025-03-23 12:47:33,400 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 11/20, size: 50
+2025-03-23 12:47:33,400 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 12/20, size: 50
+2025-03-23 12:47:33,400 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 13/20, size: 50
+2025-03-23 12:47:33,400 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 14/20, size: 50
+2025-03-23 12:47:33,400 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 15/20, size: 50
+2025-03-23 12:47:33,400 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 16/20, size: 50
+2025-03-23 12:47:33,400 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 17/20, size: 50
+2025-03-23 12:47:33,401 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 18/20, size: 50
+2025-03-23 12:47:33,401 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 19/20, size: 50
+2025-03-23 12:47:33,401 - __main__ - INFO - [20250323-124731-43631964] Sending chunk 20/20, size: 20
+2025-03-23 12:47:33,401 - __main__ - INFO - [20250323-124731-43631964] Stream completed successfully
+2025-03-23 12:47:33,406 - __main__ - INFO - [20250323-124733-43631964] New stream request received
+2025-03-23 12:47:33,407 - __main__ - INFO - [20250323-124733-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '93', 'Cf-Ray': '925070e7ec8ff963-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:47:33,407 - __main__ - INFO - [20250323-124733-43631964] Client IP: 127.0.0.1
+2025-03-23 12:47:33,407 - __main__ - INFO - [20250323-124733-43631964] Method: POST
+2025-03-23 12:47:33,407 - __main__ - INFO - [20250323-124733-43631964] Message length: 69
+2025-03-23 12:47:33,407 - __main__ - INFO - [20250323-124733-43631964] History items: 0
+2025-03-23 12:47:33,407 - __main__ - INFO - [20250323-124733-43631964] Fetching market data...
+2025-03-23 12:47:33,408 - __main__ - INFO - [20250323-124733-43631964] Market data fetched successfully
+2025-03-23 12:47:33,408 - __main__ - INFO - [20250323-124733-43631964] Market context prepared
+2025-03-23 12:47:33,408 - __main__ - INFO - [20250323-124733-43631964] Initializing Gemini model...
+2025-03-23 12:47:33,408 - __main__ - INFO - [20250323-124733-43631964] Generating content with Gemini...
+2025-03-23 12:47:34,945 - __main__ - INFO - [20250323-124733-43631964] Generated response length: 803
+2025-03-23 12:47:34,945 - __main__ - INFO - [20250323-124733-43631964] First 100 chars: Namaste!  The Indian market shows moderate growth.  For long-term growth, diversify across asset cla
+2025-03-23 12:47:34,945 - __main__ - INFO - [20250323-124733-43631964] Setting up response stream...
+2025-03-23 12:47:34,945 - __main__ - INFO - [20250323-124733-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:47:34,946 - __main__ - INFO - [20250323-124733-43631964] Starting stream with 17 chunks
+2025-03-23 12:47:34,946 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 1/17, size: 50
+2025-03-23 12:47:34,946 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:47:34] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:47:34,946 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 2/17, size: 50
+2025-03-23 12:47:34,946 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 3/17, size: 50
+2025-03-23 12:47:34,946 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 4/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 5/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 6/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 7/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 8/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 9/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 10/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 11/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 12/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 13/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 14/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 15/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 16/17, size: 50
+2025-03-23 12:47:34,947 - __main__ - INFO - [20250323-124733-43631964] Sending chunk 17/17, size: 3
+2025-03-23 12:47:34,948 - __main__ - INFO - [20250323-124733-43631964] Stream completed successfully
+2025-03-23 12:47:41,671 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:47:41,672 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:47:41] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:47:41,939 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:47:41,940 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:47:41] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:48:58,112 - __main__ - INFO - [20250323-124858-43631964] New stream request received
+2025-03-23 12:48:58,113 - __main__ - INFO - [20250323-124858-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.69.135.25', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.69.135.25', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '85', 'Cf-Ray': '92507306fb4316a4-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:48:58,113 - __main__ - INFO - [20250323-124858-43631964] Client IP: 127.0.0.1
+2025-03-23 12:48:58,113 - __main__ - INFO - [20250323-124858-43631964] Method: POST
+2025-03-23 12:48:58,113 - __main__ - INFO - [20250323-124858-43631964] Message length: 61
+2025-03-23 12:48:58,113 - __main__ - INFO - [20250323-124858-43631964] History items: 0
+2025-03-23 12:48:58,113 - __main__ - INFO - [20250323-124858-43631964] Fetching market data...
+2025-03-23 12:48:58,114 - __main__ - INFO - [20250323-124858-43631964] Market data fetched successfully
+2025-03-23 12:48:58,114 - __main__ - INFO - [20250323-124858-43631964] Market context prepared
+2025-03-23 12:48:58,114 - __main__ - INFO - [20250323-124858-43631964] Initializing Gemini model...
+2025-03-23 12:48:58,114 - __main__ - INFO - [20250323-124858-43631964] Generating content with Gemini...
+2025-03-23 12:48:59,384 - __main__ - INFO - [20250323-124858-43631964] Generated response length: 835
+2025-03-23 12:48:59,384 - __main__ - INFO - [20250323-124858-43631964] First 100 chars: Namaste!  FinWise here.  For long-term growth in the Indian market, consider diversified equity mutu
+2025-03-23 12:48:59,384 - __main__ - INFO - [20250323-124858-43631964] Setting up response stream...
+2025-03-23 12:48:59,384 - __main__ - INFO - [20250323-124858-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:48:59,385 - __main__ - INFO - [20250323-124858-43631964] Starting stream with 17 chunks
+2025-03-23 12:48:59,385 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 1/17, size: 50
+2025-03-23 12:48:59,385 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:48:59] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:48:59,385 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 2/17, size: 50
+2025-03-23 12:48:59,385 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 3/17, size: 50
+2025-03-23 12:48:59,385 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 4/17, size: 50
+2025-03-23 12:48:59,385 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 5/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 6/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 7/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 8/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 9/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 10/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 11/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 12/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 13/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 14/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 15/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 16/17, size: 50
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Sending chunk 17/17, size: 35
+2025-03-23 12:48:59,386 - __main__ - INFO - [20250323-124858-43631964] Stream completed successfully
+2025-03-23 12:49:08,439 - __main__ - INFO - [20250323-124908-43631964] New stream request received
+2025-03-23 12:49:08,439 - __main__ - INFO - [20250323-124908-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.69.135.25', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.69.135.25', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '93', 'Cf-Ray': '9250734779eb16a4-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:49:08,440 - __main__ - INFO - [20250323-124908-43631964] Client IP: 127.0.0.1
+2025-03-23 12:49:08,440 - __main__ - INFO - [20250323-124908-43631964] Method: POST
+2025-03-23 12:49:08,440 - __main__ - INFO - [20250323-124908-43631964] Message length: 69
+2025-03-23 12:49:08,440 - __main__ - INFO - [20250323-124908-43631964] History items: 0
+2025-03-23 12:49:08,440 - __main__ - INFO - [20250323-124908-43631964] Fetching market data...
+2025-03-23 12:49:08,441 - __main__ - INFO - [20250323-124908-43631964] Market data fetched successfully
+2025-03-23 12:49:08,441 - __main__ - INFO - [20250323-124908-43631964] Market context prepared
+2025-03-23 12:49:08,441 - __main__ - INFO - [20250323-124908-43631964] Initializing Gemini model...
+2025-03-23 12:49:08,441 - __main__ - INFO - [20250323-124908-43631964] Generating content with Gemini...
+2025-03-23 12:49:09,916 - __main__ - INFO - [20250323-124908-43631964] Generated response length: 906
+2025-03-23 12:49:09,917 - __main__ - INFO - [20250323-124908-43631964] First 100 chars: Namaste!  Given the current market positivity in the BSE/NSE,  a diversified portfolio is key.  Cons
+2025-03-23 12:49:09,917 - __main__ - INFO - [20250323-124908-43631964] Setting up response stream...
+2025-03-23 12:49:09,917 - __main__ - INFO - [20250323-124908-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:49:09,918 - __main__ - INFO - [20250323-124908-43631964] Starting stream with 19 chunks
+2025-03-23 12:49:09,918 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 1/19, size: 50
+2025-03-23 12:49:09,918 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:49:09] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:49:09,919 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 2/19, size: 50
+2025-03-23 12:49:09,919 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 3/19, size: 50
+2025-03-23 12:49:09,919 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 4/19, size: 50
+2025-03-23 12:49:09,919 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 5/19, size: 50
+2025-03-23 12:49:09,919 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 6/19, size: 50
+2025-03-23 12:49:09,919 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 7/19, size: 50
+2025-03-23 12:49:09,919 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 8/19, size: 50
+2025-03-23 12:49:09,920 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 9/19, size: 50
+2025-03-23 12:49:09,920 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 10/19, size: 50
+2025-03-23 12:49:09,920 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 11/19, size: 50
+2025-03-23 12:49:09,920 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 12/19, size: 50
+2025-03-23 12:49:09,920 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 13/19, size: 50
+2025-03-23 12:49:09,920 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 14/19, size: 50
+2025-03-23 12:49:09,920 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 15/19, size: 50
+2025-03-23 12:49:09,920 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 16/19, size: 50
+2025-03-23 12:49:09,921 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 17/19, size: 50
+2025-03-23 12:49:09,921 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 18/19, size: 50
+2025-03-23 12:49:09,921 - __main__ - INFO - [20250323-124908-43631964] Sending chunk 19/19, size: 6
+2025-03-23 12:49:09,921 - __main__ - INFO - [20250323-124908-43631964] Stream completed successfully
+2025-03-23 12:49:09,927 - __main__ - INFO - [20250323-124909-43631964] New stream request received
+2025-03-23 12:49:09,927 - __main__ - INFO - [20250323-124909-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '93', 'Cf-Ray': '9250734779eb16a4-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:49:09,927 - __main__ - INFO - [20250323-124909-43631964] Client IP: 127.0.0.1
+2025-03-23 12:49:09,927 - __main__ - INFO - [20250323-124909-43631964] Method: POST
+2025-03-23 12:49:09,927 - __main__ - INFO - [20250323-124909-43631964] Message length: 69
+2025-03-23 12:49:09,927 - __main__ - INFO - [20250323-124909-43631964] History items: 0
+2025-03-23 12:49:09,927 - __main__ - INFO - [20250323-124909-43631964] Fetching market data...
+2025-03-23 12:49:09,928 - __main__ - INFO - [20250323-124909-43631964] Market data fetched successfully
+2025-03-23 12:49:09,928 - __main__ - INFO - [20250323-124909-43631964] Market context prepared
+2025-03-23 12:49:09,928 - __main__ - INFO - [20250323-124909-43631964] Initializing Gemini model...
+2025-03-23 12:49:09,928 - __main__ - INFO - [20250323-124909-43631964] Generating content with Gemini...
+2025-03-23 12:49:11,507 - __main__ - INFO - [20250323-124909-43631964] Generated response length: 876
+2025-03-23 12:49:11,507 - __main__ - INFO - [20250323-124909-43631964] First 100 chars: Namaste!  FinWise here.  Given the current positive market sentiment in the BSE/NSE (Nifty 50 and Se
+2025-03-23 12:49:11,507 - __main__ - INFO - [20250323-124909-43631964] Setting up response stream...
+2025-03-23 12:49:11,507 - __main__ - INFO - [20250323-124909-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:49:11,508 - __main__ - INFO - [20250323-124909-43631964] Starting stream with 18 chunks
+2025-03-23 12:49:11,508 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 1/18, size: 50
+2025-03-23 12:49:11,508 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:49:11] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:49:11,509 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 2/18, size: 50
+2025-03-23 12:49:11,509 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 3/18, size: 50
+2025-03-23 12:49:11,509 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 4/18, size: 50
+2025-03-23 12:49:11,509 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 5/18, size: 50
+2025-03-23 12:49:11,509 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 6/18, size: 50
+2025-03-23 12:49:11,509 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 7/18, size: 50
+2025-03-23 12:49:11,510 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 8/18, size: 50
+2025-03-23 12:49:11,510 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 9/18, size: 50
+2025-03-23 12:49:11,510 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 10/18, size: 50
+2025-03-23 12:49:11,510 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 11/18, size: 50
+2025-03-23 12:49:11,510 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 12/18, size: 50
+2025-03-23 12:49:11,510 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 13/18, size: 50
+2025-03-23 12:49:11,510 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 14/18, size: 50
+2025-03-23 12:49:11,510 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 15/18, size: 50
+2025-03-23 12:49:11,511 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 16/18, size: 50
+2025-03-23 12:49:11,511 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 17/18, size: 50
+2025-03-23 12:49:11,511 - __main__ - INFO - [20250323-124909-43631964] Sending chunk 18/18, size: 26
+2025-03-23 12:49:11,511 - __main__ - INFO - [20250323-124909-43631964] Stream completed successfully
+2025-03-23 12:50:40,091 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:50:40,092 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:50:40] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:50:41,995 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:50:41,996 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:50:41] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:50:56,334 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:50:56,335 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:50:56] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:50:56,340 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:50:56,341 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:50:56] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:51:19,738 - __main__ - INFO - [20250323-125119-43631964] New stream request received
+2025-03-23 12:51:19,738 - __main__ - INFO - [20250323-125119-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '162.158.167.148', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 162.158.167.148', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '93', 'Cf-Ray': '9250767c4a7a7afd-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:51:19,739 - __main__ - INFO - [20250323-125119-43631964] Client IP: 127.0.0.1
+2025-03-23 12:51:19,739 - __main__ - INFO - [20250323-125119-43631964] Method: POST
+2025-03-23 12:51:19,739 - __main__ - INFO - [20250323-125119-43631964] Message length: 69
+2025-03-23 12:51:19,739 - __main__ - INFO - [20250323-125119-43631964] History items: 0
+2025-03-23 12:51:19,739 - __main__ - INFO - [20250323-125119-43631964] Fetching market data...
+2025-03-23 12:51:19,739 - __main__ - INFO - [20250323-125119-43631964] Market data fetched successfully
+2025-03-23 12:51:19,740 - __main__ - INFO - [20250323-125119-43631964] Market context prepared
+2025-03-23 12:51:19,740 - __main__ - INFO - [20250323-125119-43631964] Initializing Gemini model...
+2025-03-23 12:51:19,740 - __main__ - INFO - [20250323-125119-43631964] Generating content with Gemini...
+2025-03-23 12:51:21,152 - __main__ - INFO - [20250323-125119-43631964] Generated response length: 872
+2025-03-23 12:51:21,153 - __main__ - INFO - [20250323-125119-43631964] First 100 chars: Namaste!  Given the current market conditions, a diversified portfolio is key.  Consider allocating 
+2025-03-23 12:51:21,153 - __main__ - INFO - [20250323-125119-43631964] Setting up response stream...
+2025-03-23 12:51:21,153 - __main__ - INFO - [20250323-125119-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:51:21,154 - __main__ - INFO - [20250323-125119-43631964] Starting stream with 18 chunks
+2025-03-23 12:51:21,154 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 1/18, size: 50
+2025-03-23 12:51:21,154 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:51:21] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:51:21,155 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 2/18, size: 50
+2025-03-23 12:51:21,155 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 3/18, size: 50
+2025-03-23 12:51:21,155 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 4/18, size: 50
+2025-03-23 12:51:21,155 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 5/18, size: 50
+2025-03-23 12:51:21,155 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 6/18, size: 50
+2025-03-23 12:51:21,155 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 7/18, size: 50
+2025-03-23 12:51:21,156 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 8/18, size: 50
+2025-03-23 12:51:21,156 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 9/18, size: 50
+2025-03-23 12:51:21,156 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 10/18, size: 50
+2025-03-23 12:51:21,156 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 11/18, size: 50
+2025-03-23 12:51:21,156 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 12/18, size: 50
+2025-03-23 12:51:21,156 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 13/18, size: 50
+2025-03-23 12:51:21,157 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 14/18, size: 50
+2025-03-23 12:51:21,157 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 15/18, size: 50
+2025-03-23 12:51:21,157 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 16/18, size: 50
+2025-03-23 12:51:21,157 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 17/18, size: 50
+2025-03-23 12:51:21,157 - __main__ - INFO - [20250323-125119-43631964] Sending chunk 18/18, size: 22
+2025-03-23 12:51:21,157 - __main__ - INFO - [20250323-125119-43631964] Stream completed successfully
+2025-03-23 12:51:21,162 - __main__ - INFO - [20250323-125121-43631964] New stream request received
+2025-03-23 12:51:21,162 - __main__ - INFO - [20250323-125121-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '93', 'Cf-Ray': '9250767c4a7a7afd-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Content-Type': 'application/json', 'Sec-Ch-Ua-Mobile': '?1', 'Accept': '*/*'}
+2025-03-23 12:51:21,163 - __main__ - INFO - [20250323-125121-43631964] Client IP: 127.0.0.1
+2025-03-23 12:51:21,163 - __main__ - INFO - [20250323-125121-43631964] Method: POST
+2025-03-23 12:51:21,163 - __main__ - INFO - [20250323-125121-43631964] Message length: 69
+2025-03-23 12:51:21,163 - __main__ - INFO - [20250323-125121-43631964] History items: 0
+2025-03-23 12:51:21,163 - __main__ - INFO - [20250323-125121-43631964] Fetching market data...
+2025-03-23 12:51:21,163 - __main__ - INFO - [20250323-125121-43631964] Market data fetched successfully
+2025-03-23 12:51:21,163 - __main__ - INFO - [20250323-125121-43631964] Market context prepared
+2025-03-23 12:51:21,164 - __main__ - INFO - [20250323-125121-43631964] Initializing Gemini model...
+2025-03-23 12:51:21,164 - __main__ - INFO - [20250323-125121-43631964] Generating content with Gemini...
+2025-03-23 12:51:22,367 - __main__ - INFO - [20250323-125121-43631964] Generated response length: 794
+2025-03-23 12:51:22,367 - __main__ - INFO - [20250323-125121-43631964] First 100 chars: Hello!  Given the current positive market sentiment in the BSE/NSE,  a diversified portfolio is key.
+2025-03-23 12:51:22,367 - __main__ - INFO - [20250323-125121-43631964] Setting up response stream...
+2025-03-23 12:51:22,368 - __main__ - INFO - [20250323-125121-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:51:22,368 - __main__ - INFO - [20250323-125121-43631964] Starting stream with 16 chunks
+2025-03-23 12:51:22,368 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 1/16, size: 50
+2025-03-23 12:51:22,368 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:51:22] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:51:22,369 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 2/16, size: 50
+2025-03-23 12:51:22,369 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 3/16, size: 50
+2025-03-23 12:51:22,369 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 4/16, size: 50
+2025-03-23 12:51:22,369 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 5/16, size: 50
+2025-03-23 12:51:22,369 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 6/16, size: 50
+2025-03-23 12:51:22,370 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 7/16, size: 50
+2025-03-23 12:51:22,370 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 8/16, size: 50
+2025-03-23 12:51:22,370 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 9/16, size: 50
+2025-03-23 12:51:22,370 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 10/16, size: 50
+2025-03-23 12:51:22,370 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 11/16, size: 50
+2025-03-23 12:51:22,370 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 12/16, size: 50
+2025-03-23 12:51:22,370 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 13/16, size: 50
+2025-03-23 12:51:22,371 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 14/16, size: 50
+2025-03-23 12:51:22,371 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 15/16, size: 50
+2025-03-23 12:51:22,371 - __main__ - INFO - [20250323-125121-43631964] Sending chunk 16/16, size: 44
+2025-03-23 12:51:22,371 - __main__ - INFO - [20250323-125121-43631964] Stream completed successfully
+2025-03-23 12:51:46,280 - __main__ - INFO - [20250323-125146-43631964] New stream request received
+2025-03-23 12:51:46,281 - __main__ - INFO - [20250323-125146-43631964] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.103', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.158.103', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '26', 'Cf-Ray': '925077221d1f5c22-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:51:46,281 - __main__ - INFO - [20250323-125146-43631964] Client IP: 127.0.0.1
+2025-03-23 12:51:46,281 - __main__ - INFO - [20250323-125146-43631964] Method: POST
+2025-03-23 12:51:46,281 - __main__ - INFO - [20250323-125146-43631964] Message length: 2
+2025-03-23 12:51:46,281 - __main__ - INFO - [20250323-125146-43631964] History items: 0
+2025-03-23 12:51:46,281 - __main__ - INFO - [20250323-125146-43631964] Fetching market data...
+2025-03-23 12:51:46,282 - __main__ - INFO - [20250323-125146-43631964] Market data fetched successfully
+2025-03-23 12:51:46,282 - __main__ - INFO - [20250323-125146-43631964] Market context prepared
+2025-03-23 12:51:46,282 - __main__ - INFO - [20250323-125146-43631964] Initializing Gemini model...
+2025-03-23 12:51:46,282 - __main__ - INFO - [20250323-125146-43631964] Generating content with Gemini...
+2025-03-23 12:51:47,507 - __main__ - INFO - [20250323-125146-43631964] Generated response length: 791
+2025-03-23 12:51:47,508 - __main__ - INFO - [20250323-125146-43631964] First 100 chars: Hi!  Given the current market upswing in the Nifty and Sensex,  consider a long-term, diversified po
+2025-03-23 12:51:47,508 - __main__ - INFO - [20250323-125146-43631964] Setting up response stream...
+2025-03-23 12:51:47,508 - __main__ - INFO - [20250323-125146-43631964] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:51:47,509 - __main__ - INFO - [20250323-125146-43631964] Starting stream with 16 chunks
+2025-03-23 12:51:47,509 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 1/16, size: 50
+2025-03-23 12:51:47,509 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:51:47] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:51:47,509 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 2/16, size: 50
+2025-03-23 12:51:47,510 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 3/16, size: 50
+2025-03-23 12:51:47,510 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 4/16, size: 50
+2025-03-23 12:51:47,510 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 5/16, size: 50
+2025-03-23 12:51:47,510 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 6/16, size: 50
+2025-03-23 12:51:47,510 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 7/16, size: 50
+2025-03-23 12:51:47,510 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 8/16, size: 50
+2025-03-23 12:51:47,510 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 9/16, size: 50
+2025-03-23 12:51:47,511 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 10/16, size: 50
+2025-03-23 12:51:47,511 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 11/16, size: 50
+2025-03-23 12:51:47,511 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 12/16, size: 50
+2025-03-23 12:51:47,511 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 13/16, size: 50
+2025-03-23 12:51:47,511 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 14/16, size: 50
+2025-03-23 12:51:47,512 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 15/16, size: 50
+2025-03-23 12:51:47,512 - __main__ - INFO - [20250323-125146-43631964] Sending chunk 16/16, size: 41
+2025-03-23 12:51:47,512 - __main__ - INFO - [20250323-125146-43631964] Stream completed successfully
+2025-03-23 12:51:47,519 - __main__ - INFO - [20250323-125147-43631964] New stream request received
+2025-03-23 12:51:47,520 - __main__ - INFO - [20250323-125147-43631964] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '26', 'Cf-Ray': '925077221d1f5c22-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:51:47,520 - __main__ - INFO - [20250323-125147-43631964] Client IP: 127.0.0.1
+2025-03-23 12:51:47,520 - __main__ - INFO - [20250323-125147-43631964] Method: POST
+2025-03-23 12:51:47,520 - __main__ - INFO - [20250323-125147-43631964] Message length: 2
+2025-03-23 12:51:47,520 - __main__ - INFO - [20250323-125147-43631964] History items: 0
+2025-03-23 12:51:47,520 - __main__ - INFO - [20250323-125147-43631964] Fetching market data...
+2025-03-23 12:51:47,520 - __main__ - INFO - [20250323-125147-43631964] Market data fetched successfully
+2025-03-23 12:51:47,520 - __main__ - INFO - [20250323-125147-43631964] Market context prepared
+2025-03-23 12:51:47,521 - __main__ - INFO - [20250323-125147-43631964] Initializing Gemini model...
+2025-03-23 12:51:47,521 - __main__ - INFO - [20250323-125147-43631964] Generating content with Gemini...
+2025-03-23 12:51:47,918 - werkzeug - INFO -  * Detected change in '/Users/darshan/Projects/gem_chat/server-python/app.py', reloading
+2025-03-23 12:51:50,012 - werkzeug - INFO -  * Restarting with stat
+2025-03-23 12:51:50,360 - __main__ - INFO - Starting server on port 9000
+2025-03-23 12:51:50,375 - werkzeug - WARNING -  * Debugger is active!
+2025-03-23 12:51:50,380 - werkzeug - INFO -  * Debugger PIN: 139-524-174
+2025-03-23 12:52:06,525 - __main__ - INFO - [20250323-125206-43832686] New stream request received
+2025-03-23 12:52:06,526 - __main__ - INFO - [20250323-125206-43832686] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.103', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.158.103', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '40', 'Cf-Ray': '925077a0ae1f5c22-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:52:06,526 - __main__ - INFO - [20250323-125206-43832686] Client IP: 127.0.0.1
+2025-03-23 12:52:06,526 - __main__ - INFO - [20250323-125206-43832686] Method: POST
+2025-03-23 12:52:06,526 - __main__ - INFO - [20250323-125206-43832686] Message length: 16
+2025-03-23 12:52:06,526 - __main__ - INFO - [20250323-125206-43832686] History items: 0
+2025-03-23 12:52:06,526 - __main__ - INFO - [20250323-125206-43832686] Fetching market data...
+2025-03-23 12:52:07,369 - __main__ - INFO - [20250323-125206-43832686] Market data fetched successfully
+2025-03-23 12:52:07,369 - __main__ - INFO - [20250323-125206-43832686] Market context prepared
+2025-03-23 12:52:07,369 - __main__ - INFO - [20250323-125206-43832686] Initializing Gemini model...
+2025-03-23 12:52:07,370 - __main__ - INFO - [20250323-125206-43832686] Generating content with Gemini...
+2025-03-23 12:52:08,861 - __main__ - INFO - [20250323-125206-43832686] Generated response length: 835
+2025-03-23 12:52:08,862 - __main__ - INFO - [20250323-125206-43832686] First 100 chars: Namaste!  Reliance's recent performance is positive, but remember, a single day's gain doesn't defin
+2025-03-23 12:52:08,862 - __main__ - INFO - [20250323-125206-43832686] Setting up response stream...
+2025-03-23 12:52:08,863 - __main__ - INFO - [20250323-125206-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:52:08,864 - __main__ - INFO - [20250323-125206-43832686] Starting stream with 17 chunks
+2025-03-23 12:52:08,864 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 1/17, size: 50
+2025-03-23 12:52:08,864 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:52:08] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:52:08,864 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 2/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 3/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 4/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 5/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 6/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 7/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 8/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 9/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 10/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 11/17, size: 50
+2025-03-23 12:52:08,865 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 12/17, size: 50
+2025-03-23 12:52:08,866 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 13/17, size: 50
+2025-03-23 12:52:08,866 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 14/17, size: 50
+2025-03-23 12:52:08,866 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 15/17, size: 50
+2025-03-23 12:52:08,866 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 16/17, size: 50
+2025-03-23 12:52:08,866 - __main__ - INFO - [20250323-125206-43832686] Sending chunk 17/17, size: 35
+2025-03-23 12:52:08,866 - __main__ - INFO - [20250323-125206-43832686] Stream completed successfully
+2025-03-23 12:52:08,870 - __main__ - INFO - [20250323-125208-43832686] New stream request received
+2025-03-23 12:52:08,871 - __main__ - INFO - [20250323-125208-43832686] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '40', 'Cf-Ray': '925077a0ae1f5c22-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:52:08,871 - __main__ - INFO - [20250323-125208-43832686] Client IP: 127.0.0.1
+2025-03-23 12:52:08,871 - __main__ - INFO - [20250323-125208-43832686] Method: POST
+2025-03-23 12:52:08,871 - __main__ - INFO - [20250323-125208-43832686] Message length: 16
+2025-03-23 12:52:08,871 - __main__ - INFO - [20250323-125208-43832686] History items: 0
+2025-03-23 12:52:08,871 - __main__ - INFO - [20250323-125208-43832686] Fetching market data...
+2025-03-23 12:52:08,871 - __main__ - INFO - [20250323-125208-43832686] Market data fetched successfully
+2025-03-23 12:52:08,872 - __main__ - INFO - [20250323-125208-43832686] Market context prepared
+2025-03-23 12:52:08,872 - __main__ - INFO - [20250323-125208-43832686] Initializing Gemini model...
+2025-03-23 12:52:08,872 - __main__ - INFO - [20250323-125208-43832686] Generating content with Gemini...
+2025-03-23 12:52:10,272 - __main__ - INFO - [20250323-125208-43832686] Generated response length: 938
+2025-03-23 12:52:10,273 - __main__ - INFO - [20250323-125208-43832686] First 100 chars: Namaste!  Reliance's recent performance is positive, but remember, a single day's gain doesn't defin
+2025-03-23 12:52:10,273 - __main__ - INFO - [20250323-125208-43832686] Setting up response stream...
+2025-03-23 12:52:10,274 - __main__ - INFO - [20250323-125208-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:52:10,274 - __main__ - INFO - [20250323-125208-43832686] Starting stream with 19 chunks
+2025-03-23 12:52:10,274 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 1/19, size: 50
+2025-03-23 12:52:10,275 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:52:10] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:52:10,275 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 2/19, size: 50
+2025-03-23 12:52:10,275 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 3/19, size: 50
+2025-03-23 12:52:10,275 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 4/19, size: 50
+2025-03-23 12:52:10,276 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 5/19, size: 50
+2025-03-23 12:52:10,276 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 6/19, size: 50
+2025-03-23 12:52:10,276 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 7/19, size: 50
+2025-03-23 12:52:10,276 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 8/19, size: 50
+2025-03-23 12:52:10,276 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 9/19, size: 50
+2025-03-23 12:52:10,276 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 10/19, size: 50
+2025-03-23 12:52:10,276 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 11/19, size: 50
+2025-03-23 12:52:10,277 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 12/19, size: 50
+2025-03-23 12:52:10,277 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 13/19, size: 50
+2025-03-23 12:52:10,277 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 14/19, size: 50
+2025-03-23 12:52:10,277 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 15/19, size: 50
+2025-03-23 12:52:10,277 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 16/19, size: 50
+2025-03-23 12:52:10,277 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 17/19, size: 50
+2025-03-23 12:52:10,277 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 18/19, size: 50
+2025-03-23 12:52:10,278 - __main__ - INFO - [20250323-125208-43832686] Sending chunk 19/19, size: 38
+2025-03-23 12:52:10,278 - __main__ - INFO - [20250323-125208-43832686] Stream completed successfully
+2025-03-23 12:52:32,308 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:52:32,309 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:52:32] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:52:34,628 - __main__ - INFO - [20250323-125234-43832686] New stream request received
+2025-03-23 12:52:34,629 - __main__ - INFO - [20250323-125234-43832686] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.69.135.26', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa, 172.69.135.26', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '102', 'Cf-Ray': '925078504c3a6893-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:52:34,629 - __main__ - INFO - [20250323-125234-43832686] Client IP: 127.0.0.1
+2025-03-23 12:52:34,629 - __main__ - INFO - [20250323-125234-43832686] Method: POST
+2025-03-23 12:52:34,629 - __main__ - INFO - [20250323-125234-43832686] Message length: 78
+2025-03-23 12:52:34,629 - __main__ - INFO - [20250323-125234-43832686] History items: 0
+2025-03-23 12:52:34,629 - __main__ - INFO - [20250323-125234-43832686] Fetching market data...
+2025-03-23 12:52:34,630 - __main__ - INFO - [20250323-125234-43832686] Market data fetched successfully
+2025-03-23 12:52:34,630 - __main__ - INFO - [20250323-125234-43832686] Market context prepared
+2025-03-23 12:52:34,630 - __main__ - INFO - [20250323-125234-43832686] Initializing Gemini model...
+2025-03-23 12:52:34,630 - __main__ - INFO - [20250323-125234-43832686] Generating content with Gemini...
+2025-03-23 12:52:36,210 - __main__ - INFO - [20250323-125234-43832686] Generated response length: 864
+2025-03-23 12:52:36,211 - __main__ - INFO - [20250323-125234-43832686] First 100 chars: Namaste!  I'm FinWise, your ethical financial advisor.  In India, short-term capital gains (STCG) on
+2025-03-23 12:52:36,211 - __main__ - INFO - [20250323-125234-43832686] Setting up response stream...
+2025-03-23 12:52:36,211 - __main__ - INFO - [20250323-125234-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:52:36,212 - __main__ - INFO - [20250323-125234-43832686] Starting stream with 18 chunks
+2025-03-23 12:52:36,212 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 1/18, size: 50
+2025-03-23 12:52:36,212 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:52:36] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:52:36,212 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 2/18, size: 50
+2025-03-23 12:52:36,213 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 3/18, size: 50
+2025-03-23 12:52:36,213 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 4/18, size: 50
+2025-03-23 12:52:36,213 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 5/18, size: 50
+2025-03-23 12:52:36,213 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 6/18, size: 50
+2025-03-23 12:52:36,213 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 7/18, size: 50
+2025-03-23 12:52:36,213 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 8/18, size: 50
+2025-03-23 12:52:36,213 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 9/18, size: 50
+2025-03-23 12:52:36,214 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 10/18, size: 50
+2025-03-23 12:52:36,214 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 11/18, size: 50
+2025-03-23 12:52:36,214 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 12/18, size: 50
+2025-03-23 12:52:36,214 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 13/18, size: 50
+2025-03-23 12:52:36,214 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 14/18, size: 50
+2025-03-23 12:52:36,214 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 15/18, size: 50
+2025-03-23 12:52:36,214 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 16/18, size: 50
+2025-03-23 12:52:36,215 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 17/18, size: 50
+2025-03-23 12:52:36,215 - __main__ - INFO - [20250323-125234-43832686] Sending chunk 18/18, size: 14
+2025-03-23 12:52:36,215 - __main__ - INFO - [20250323-125234-43832686] Stream completed successfully
+2025-03-23 12:52:36,221 - __main__ - INFO - [20250323-125236-43832686] New stream request received
+2025-03-23 12:52:36,222 - __main__ - INFO - [20250323-125236-43832686] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '102', 'Cf-Ray': '925078504c3a6893-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:52:36,222 - __main__ - INFO - [20250323-125236-43832686] Client IP: 127.0.0.1
+2025-03-23 12:52:36,222 - __main__ - INFO - [20250323-125236-43832686] Method: POST
+2025-03-23 12:52:36,222 - __main__ - INFO - [20250323-125236-43832686] Message length: 78
+2025-03-23 12:52:36,222 - __main__ - INFO - [20250323-125236-43832686] History items: 0
+2025-03-23 12:52:36,222 - __main__ - INFO - [20250323-125236-43832686] Fetching market data...
+2025-03-23 12:52:36,223 - __main__ - INFO - [20250323-125236-43832686] Market data fetched successfully
+2025-03-23 12:52:36,223 - __main__ - INFO - [20250323-125236-43832686] Market context prepared
+2025-03-23 12:52:36,223 - __main__ - INFO - [20250323-125236-43832686] Initializing Gemini model...
+2025-03-23 12:52:36,223 - __main__ - INFO - [20250323-125236-43832686] Generating content with Gemini...
+2025-03-23 12:52:37,745 - __main__ - INFO - [20250323-125236-43832686] Generated response length: 886
+2025-03-23 12:52:37,746 - __main__ - INFO - [20250323-125236-43832686] First 100 chars: Namaste!  I'm FinWise.  In India, short-term capital gains (STCG) on equities (held for less than 1 
+2025-03-23 12:52:37,746 - __main__ - INFO - [20250323-125236-43832686] Setting up response stream...
+2025-03-23 12:52:37,746 - __main__ - INFO - [20250323-125236-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:52:37,747 - __main__ - INFO - [20250323-125236-43832686] Starting stream with 18 chunks
+2025-03-23 12:52:37,747 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 1/18, size: 50
+2025-03-23 12:52:37,747 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:52:37] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:52:37,748 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 2/18, size: 50
+2025-03-23 12:52:37,748 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 3/18, size: 50
+2025-03-23 12:52:37,748 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 4/18, size: 50
+2025-03-23 12:52:37,748 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 5/18, size: 50
+2025-03-23 12:52:37,748 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 6/18, size: 50
+2025-03-23 12:52:37,748 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 7/18, size: 50
+2025-03-23 12:52:37,748 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 8/18, size: 50
+2025-03-23 12:52:37,749 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 9/18, size: 50
+2025-03-23 12:52:37,749 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 10/18, size: 50
+2025-03-23 12:52:37,749 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 11/18, size: 50
+2025-03-23 12:52:37,749 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 12/18, size: 50
+2025-03-23 12:52:37,749 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 13/18, size: 50
+2025-03-23 12:52:37,749 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 14/18, size: 50
+2025-03-23 12:52:37,749 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 15/18, size: 50
+2025-03-23 12:52:37,750 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 16/18, size: 50
+2025-03-23 12:52:37,750 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 17/18, size: 50
+2025-03-23 12:52:37,750 - __main__ - INFO - [20250323-125236-43832686] Sending chunk 18/18, size: 36
+2025-03-23 12:52:37,750 - __main__ - INFO - [20250323-125236-43832686] Stream completed successfully
+2025-03-23 12:52:37,852 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:52:37,853 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:52:37] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:52:37,865 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:52:37,866 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:52:37] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:52:50,175 - __main__ - INFO - [20250323-125250-43832686] New stream request received
+2025-03-23 12:52:50,175 - __main__ - INFO - [20250323-125250-43832686] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.103', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.158.103', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '93', 'Cf-Ray': '925078b10d045c22-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:52:50,175 - __main__ - INFO - [20250323-125250-43832686] Client IP: 127.0.0.1
+2025-03-23 12:52:50,175 - __main__ - INFO - [20250323-125250-43832686] Method: POST
+2025-03-23 12:52:50,175 - __main__ - INFO - [20250323-125250-43832686] Message length: 69
+2025-03-23 12:52:50,175 - __main__ - INFO - [20250323-125250-43832686] History items: 0
+2025-03-23 12:52:50,175 - __main__ - INFO - [20250323-125250-43832686] Fetching market data...
+2025-03-23 12:52:50,176 - __main__ - INFO - [20250323-125250-43832686] Market data fetched successfully
+2025-03-23 12:52:50,176 - __main__ - INFO - [20250323-125250-43832686] Market context prepared
+2025-03-23 12:52:50,176 - __main__ - INFO - [20250323-125250-43832686] Initializing Gemini model...
+2025-03-23 12:52:50,176 - __main__ - INFO - [20250323-125250-43832686] Generating content with Gemini...
+2025-03-23 12:52:58,599 - __main__ - INFO - [20250323-125250-43832686] Generated response length: 906
+2025-03-23 12:52:58,599 - __main__ - INFO - [20250323-125250-43832686] First 100 chars: Namaste!  FinWise here.  Given the Nifty and Sensex are showing positive growth, it's a good time to
+2025-03-23 12:52:58,599 - __main__ - INFO - [20250323-125250-43832686] Setting up response stream...
+2025-03-23 12:52:58,600 - __main__ - INFO - [20250323-125250-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:52:58,600 - __main__ - INFO - [20250323-125250-43832686] Starting stream with 19 chunks
+2025-03-23 12:52:58,600 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 1/19, size: 50
+2025-03-23 12:52:58,601 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:52:58] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:52:58,601 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 2/19, size: 50
+2025-03-23 12:52:58,601 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 3/19, size: 50
+2025-03-23 12:52:58,601 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 4/19, size: 50
+2025-03-23 12:52:58,602 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 5/19, size: 50
+2025-03-23 12:52:58,602 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 6/19, size: 50
+2025-03-23 12:52:58,602 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 7/19, size: 50
+2025-03-23 12:52:58,602 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 8/19, size: 50
+2025-03-23 12:52:58,602 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 9/19, size: 50
+2025-03-23 12:52:58,602 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 10/19, size: 50
+2025-03-23 12:52:58,602 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 11/19, size: 50
+2025-03-23 12:52:58,603 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 12/19, size: 50
+2025-03-23 12:52:58,603 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 13/19, size: 50
+2025-03-23 12:52:58,603 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 14/19, size: 50
+2025-03-23 12:52:58,603 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 15/19, size: 50
+2025-03-23 12:52:58,603 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 16/19, size: 50
+2025-03-23 12:52:58,603 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 17/19, size: 50
+2025-03-23 12:52:58,603 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 18/19, size: 50
+2025-03-23 12:52:58,603 - __main__ - INFO - [20250323-125250-43832686] Sending chunk 19/19, size: 6
+2025-03-23 12:52:58,604 - __main__ - INFO - [20250323-125250-43832686] Stream completed successfully
+2025-03-23 12:52:58,609 - __main__ - INFO - [20250323-125258-43832686] New stream request received
+2025-03-23 12:52:58,609 - __main__ - INFO - [20250323-125258-43832686] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '93', 'Cf-Ray': '925078b10d045c22-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:52:58,609 - __main__ - INFO - [20250323-125258-43832686] Client IP: 127.0.0.1
+2025-03-23 12:52:58,610 - __main__ - INFO - [20250323-125258-43832686] Method: POST
+2025-03-23 12:52:58,610 - __main__ - INFO - [20250323-125258-43832686] Message length: 69
+2025-03-23 12:52:58,610 - __main__ - INFO - [20250323-125258-43832686] History items: 0
+2025-03-23 12:52:58,610 - __main__ - INFO - [20250323-125258-43832686] Fetching market data...
+2025-03-23 12:52:58,610 - __main__ - INFO - [20250323-125258-43832686] Market data fetched successfully
+2025-03-23 12:52:58,610 - __main__ - INFO - [20250323-125258-43832686] Market context prepared
+2025-03-23 12:52:58,610 - __main__ - INFO - [20250323-125258-43832686] Initializing Gemini model...
+2025-03-23 12:52:58,611 - __main__ - INFO - [20250323-125258-43832686] Generating content with Gemini...
+2025-03-23 12:53:00,021 - __main__ - INFO - [20250323-125258-43832686] Generated response length: 852
+2025-03-23 12:53:00,021 - __main__ - INFO - [20250323-125258-43832686] First 100 chars: Namaste!  FinWise here.  Given the Nifty and Sensex are up slightly, it's a good time to review your
+2025-03-23 12:53:00,021 - __main__ - INFO - [20250323-125258-43832686] Setting up response stream...
+2025-03-23 12:53:00,022 - __main__ - INFO - [20250323-125258-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:53:00,022 - __main__ - INFO - [20250323-125258-43832686] Starting stream with 18 chunks
+2025-03-23 12:53:00,022 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 1/18, size: 50
+2025-03-23 12:53:00,023 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:00] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:53:00,023 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 2/18, size: 50
+2025-03-23 12:53:00,023 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 3/18, size: 50
+2025-03-23 12:53:00,023 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 4/18, size: 50
+2025-03-23 12:53:00,024 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 5/18, size: 50
+2025-03-23 12:53:00,024 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 6/18, size: 50
+2025-03-23 12:53:00,024 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 7/18, size: 50
+2025-03-23 12:53:00,024 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 8/18, size: 50
+2025-03-23 12:53:00,024 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 9/18, size: 50
+2025-03-23 12:53:00,024 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 10/18, size: 50
+2025-03-23 12:53:00,024 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 11/18, size: 50
+2025-03-23 12:53:00,025 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 12/18, size: 50
+2025-03-23 12:53:00,025 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 13/18, size: 50
+2025-03-23 12:53:00,025 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 14/18, size: 50
+2025-03-23 12:53:00,025 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 15/18, size: 50
+2025-03-23 12:53:00,025 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 16/18, size: 50
+2025-03-23 12:53:00,025 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 17/18, size: 50
+2025-03-23 12:53:00,025 - __main__ - INFO - [20250323-125258-43832686] Sending chunk 18/18, size: 2
+2025-03-23 12:53:00,025 - __main__ - INFO - [20250323-125258-43832686] Stream completed successfully
+2025-03-23 12:53:15,136 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:53:15,137 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:15] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:53:20,355 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:53:20,356 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:20] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:53:41,100 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:53:41,102 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:53:41,102 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:41] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:53:41,103 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:41] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:53:47,088 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:53:47,090 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:53:47,091 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:47] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:53:47,091 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:47] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:53:50,250 - __main__ - INFO - [20250323-125350-43832686] New stream request received
+2025-03-23 12:53:50,251 - __main__ - INFO - [20250323-125350-43832686] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.103', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.158.103', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '93', 'Cf-Ray': '92507a28ac5a5c22-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:53:50,251 - __main__ - INFO - [20250323-125350-43832686] Client IP: 127.0.0.1
+2025-03-23 12:53:50,251 - __main__ - INFO - [20250323-125350-43832686] Method: POST
+2025-03-23 12:53:50,252 - __main__ - INFO - [20250323-125350-43832686] Message length: 69
+2025-03-23 12:53:50,252 - __main__ - INFO - [20250323-125350-43832686] History items: 0
+2025-03-23 12:53:50,252 - __main__ - INFO - [20250323-125350-43832686] Fetching market data...
+2025-03-23 12:53:50,252 - __main__ - INFO - [20250323-125350-43832686] Market data fetched successfully
+2025-03-23 12:53:50,252 - __main__ - INFO - [20250323-125350-43832686] Market context prepared
+2025-03-23 12:53:50,252 - __main__ - INFO - [20250323-125350-43832686] Initializing Gemini model...
+2025-03-23 12:53:50,252 - __main__ - INFO - [20250323-125350-43832686] Generating content with Gemini...
+2025-03-23 12:53:51,584 - __main__ - INFO - [20250323-125350-43832686] Generated response length: 852
+2025-03-23 12:53:51,584 - __main__ - INFO - [20250323-125350-43832686] First 100 chars: Namaste!  FinWise here.  Given the current positive market sentiment (Nifty 50 at 22000), consider a
+2025-03-23 12:53:51,584 - __main__ - INFO - [20250323-125350-43832686] Setting up response stream...
+2025-03-23 12:53:51,585 - __main__ - INFO - [20250323-125350-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:53:51,585 - __main__ - INFO - [20250323-125350-43832686] Starting stream with 18 chunks
+2025-03-23 12:53:51,585 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 1/18, size: 50
+2025-03-23 12:53:51,586 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:51] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:53:51,586 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 2/18, size: 50
+2025-03-23 12:53:51,586 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 3/18, size: 50
+2025-03-23 12:53:51,586 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 4/18, size: 50
+2025-03-23 12:53:51,587 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 5/18, size: 50
+2025-03-23 12:53:51,587 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 6/18, size: 50
+2025-03-23 12:53:51,587 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 7/18, size: 50
+2025-03-23 12:53:51,587 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 8/18, size: 50
+2025-03-23 12:53:51,587 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 9/18, size: 50
+2025-03-23 12:53:51,587 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 10/18, size: 50
+2025-03-23 12:53:51,587 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 11/18, size: 50
+2025-03-23 12:53:51,588 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 12/18, size: 50
+2025-03-23 12:53:51,588 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 13/18, size: 50
+2025-03-23 12:53:51,588 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 14/18, size: 50
+2025-03-23 12:53:51,588 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 15/18, size: 50
+2025-03-23 12:53:51,588 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 16/18, size: 50
+2025-03-23 12:53:51,588 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 17/18, size: 50
+2025-03-23 12:53:51,588 - __main__ - INFO - [20250323-125350-43832686] Sending chunk 18/18, size: 2
+2025-03-23 12:53:51,588 - __main__ - INFO - [20250323-125350-43832686] Stream completed successfully
+2025-03-23 12:53:51,594 - __main__ - INFO - [20250323-125351-43832686] New stream request received
+2025-03-23 12:53:51,594 - __main__ - INFO - [20250323-125351-43832686] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '93', 'Cf-Ray': '92507a28ac5a5c22-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:53:51,594 - __main__ - INFO - [20250323-125351-43832686] Client IP: 127.0.0.1
+2025-03-23 12:53:51,594 - __main__ - INFO - [20250323-125351-43832686] Method: POST
+2025-03-23 12:53:51,595 - __main__ - INFO - [20250323-125351-43832686] Message length: 69
+2025-03-23 12:53:51,595 - __main__ - INFO - [20250323-125351-43832686] History items: 0
+2025-03-23 12:53:51,595 - __main__ - INFO - [20250323-125351-43832686] Fetching market data...
+2025-03-23 12:53:51,595 - __main__ - INFO - [20250323-125351-43832686] Market data fetched successfully
+2025-03-23 12:53:51,595 - __main__ - INFO - [20250323-125351-43832686] Market context prepared
+2025-03-23 12:53:51,595 - __main__ - INFO - [20250323-125351-43832686] Initializing Gemini model...
+2025-03-23 12:53:51,595 - __main__ - INFO - [20250323-125351-43832686] Generating content with Gemini...
+2025-03-23 12:53:53,114 - __main__ - INFO - [20250323-125351-43832686] Generated response length: 1029
+2025-03-23 12:53:53,115 - __main__ - INFO - [20250323-125351-43832686] First 100 chars: Namaste!  FinWise here.  Given the current market buoyancy in the BSE/NSE, a diversified portfolio i
+2025-03-23 12:53:53,115 - __main__ - INFO - [20250323-125351-43832686] Setting up response stream...
+2025-03-23 12:53:53,115 - __main__ - INFO - [20250323-125351-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:53:53,116 - __main__ - INFO - [20250323-125351-43832686] Starting stream with 21 chunks
+2025-03-23 12:53:53,116 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 1/21, size: 50
+2025-03-23 12:53:53,116 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:53:53] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:53:53,117 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 2/21, size: 50
+2025-03-23 12:53:53,117 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 3/21, size: 50
+2025-03-23 12:53:53,117 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 4/21, size: 50
+2025-03-23 12:53:53,117 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 5/21, size: 50
+2025-03-23 12:53:53,117 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 6/21, size: 50
+2025-03-23 12:53:53,117 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 7/21, size: 50
+2025-03-23 12:53:53,118 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 8/21, size: 50
+2025-03-23 12:53:53,118 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 9/21, size: 50
+2025-03-23 12:53:53,118 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 10/21, size: 50
+2025-03-23 12:53:53,118 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 11/21, size: 50
+2025-03-23 12:53:53,118 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 12/21, size: 50
+2025-03-23 12:53:53,118 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 13/21, size: 50
+2025-03-23 12:53:53,118 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 14/21, size: 50
+2025-03-23 12:53:53,118 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 15/21, size: 50
+2025-03-23 12:53:53,119 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 16/21, size: 50
+2025-03-23 12:53:53,119 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 17/21, size: 50
+2025-03-23 12:53:53,119 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 18/21, size: 50
+2025-03-23 12:53:53,119 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 19/21, size: 50
+2025-03-23 12:53:53,119 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 20/21, size: 50
+2025-03-23 12:53:53,119 - __main__ - INFO - [20250323-125351-43832686] Sending chunk 21/21, size: 29
+2025-03-23 12:53:53,119 - __main__ - INFO - [20250323-125351-43832686] Stream completed successfully
+2025-03-23 12:55:58,206 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:55:58,207 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:55:58] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:56:02,565 - __main__ - INFO - [20250323-125602-43832686] New stream request received
+2025-03-23 12:56:02,566 - __main__ - INFO - [20250323-125602-43832686] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.68', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.158.68', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '85', 'Cf-Ray': '92507d63ba5afa5a-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:56:02,566 - __main__ - INFO - [20250323-125602-43832686] Client IP: 127.0.0.1
+2025-03-23 12:56:02,566 - __main__ - INFO - [20250323-125602-43832686] Method: POST
+2025-03-23 12:56:02,567 - __main__ - INFO - [20250323-125602-43832686] Message length: 61
+2025-03-23 12:56:02,567 - __main__ - INFO - [20250323-125602-43832686] History items: 0
+2025-03-23 12:56:02,567 - __main__ - INFO - [20250323-125602-43832686] Fetching market data...
+2025-03-23 12:56:02,567 - __main__ - INFO - [20250323-125602-43832686] Market data fetched successfully
+2025-03-23 12:56:02,567 - __main__ - INFO - [20250323-125602-43832686] Market context prepared
+2025-03-23 12:56:02,567 - __main__ - INFO - [20250323-125602-43832686] Initializing Gemini model...
+2025-03-23 12:56:02,568 - __main__ - INFO - [20250323-125602-43832686] Generating content with Gemini...
+2025-03-23 12:56:04,203 - __main__ - INFO - [20250323-125602-43832686] Generated response length: 916
+2025-03-23 12:56:04,204 - __main__ - INFO - [20250323-125602-43832686] First 100 chars: Namaste!  I'm FinWise.  For long-term growth in the Indian market (Nifty 50 at 22000!), consider div
+2025-03-23 12:56:04,204 - __main__ - INFO - [20250323-125602-43832686] Setting up response stream...
+2025-03-23 12:56:04,205 - __main__ - INFO - [20250323-125602-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:56:04,205 - __main__ - INFO - [20250323-125602-43832686] Starting stream with 19 chunks
+2025-03-23 12:56:04,205 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 1/19, size: 50
+2025-03-23 12:56:04,205 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:56:04] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:56:04,206 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 2/19, size: 50
+2025-03-23 12:56:04,206 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 3/19, size: 50
+2025-03-23 12:56:04,206 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 4/19, size: 50
+2025-03-23 12:56:04,206 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 5/19, size: 50
+2025-03-23 12:56:04,207 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 6/19, size: 50
+2025-03-23 12:56:04,207 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 7/19, size: 50
+2025-03-23 12:56:04,207 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 8/19, size: 50
+2025-03-23 12:56:04,207 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 9/19, size: 50
+2025-03-23 12:56:04,207 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 10/19, size: 50
+2025-03-23 12:56:04,207 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 11/19, size: 50
+2025-03-23 12:56:04,207 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 12/19, size: 50
+2025-03-23 12:56:04,208 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 13/19, size: 50
+2025-03-23 12:56:04,208 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 14/19, size: 50
+2025-03-23 12:56:04,208 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 15/19, size: 50
+2025-03-23 12:56:04,208 - __main__ - INFO - [20250323-125602-43832686] Sending chunk 16/19, size: 50
+2025-03-23 12:56:04,213 - __main__ - INFO - [20250323-125604-43832686] New stream request received
+2025-03-23 12:56:04,213 - __main__ - INFO - [20250323-125604-43832686] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '85', 'Cf-Ray': '92507d63ba5afa5a-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:56:04,213 - __main__ - INFO - [20250323-125604-43832686] Client IP: 127.0.0.1
+2025-03-23 12:56:04,213 - __main__ - INFO - [20250323-125604-43832686] Method: POST
+2025-03-23 12:56:04,213 - __main__ - INFO - [20250323-125604-43832686] Message length: 61
+2025-03-23 12:56:04,213 - __main__ - INFO - [20250323-125604-43832686] History items: 0
+2025-03-23 12:56:04,213 - __main__ - INFO - [20250323-125604-43832686] Fetching market data...
+2025-03-23 12:56:04,214 - __main__ - INFO - [20250323-125604-43832686] Market data fetched successfully
+2025-03-23 12:56:04,214 - __main__ - INFO - [20250323-125604-43832686] Market context prepared
+2025-03-23 12:56:04,214 - __main__ - INFO - [20250323-125604-43832686] Initializing Gemini model...
+2025-03-23 12:56:04,214 - __main__ - INFO - [20250323-125604-43832686] Generating content with Gemini...
+2025-03-23 12:56:06,035 - __main__ - INFO - [20250323-125604-43832686] Generated response length: 1010
+2025-03-23 12:56:06,035 - __main__ - INFO - [20250323-125604-43832686] First 100 chars: Namaste!  FinWise here.  For long-term growth in the Indian market, consider diversified equity mutu
+2025-03-23 12:56:06,035 - __main__ - INFO - [20250323-125604-43832686] Setting up response stream...
+2025-03-23 12:56:06,036 - __main__ - INFO - [20250323-125604-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:56:06,036 - __main__ - INFO - [20250323-125604-43832686] Starting stream with 21 chunks
+2025-03-23 12:56:06,036 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 1/21, size: 50
+2025-03-23 12:56:06,037 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:56:06] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:56:06,037 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 2/21, size: 50
+2025-03-23 12:56:06,037 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 3/21, size: 50
+2025-03-23 12:56:06,038 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 4/21, size: 50
+2025-03-23 12:56:06,038 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 5/21, size: 50
+2025-03-23 12:56:06,038 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 6/21, size: 50
+2025-03-23 12:56:06,038 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 7/21, size: 50
+2025-03-23 12:56:06,038 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 8/21, size: 50
+2025-03-23 12:56:06,038 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 9/21, size: 50
+2025-03-23 12:56:06,038 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 10/21, size: 50
+2025-03-23 12:56:06,039 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 11/21, size: 50
+2025-03-23 12:56:06,039 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 12/21, size: 50
+2025-03-23 12:56:06,039 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 13/21, size: 50
+2025-03-23 12:56:06,039 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 14/21, size: 50
+2025-03-23 12:56:06,039 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 15/21, size: 50
+2025-03-23 12:56:06,039 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 16/21, size: 50
+2025-03-23 12:56:06,039 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 17/21, size: 50
+2025-03-23 12:56:06,040 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 18/21, size: 50
+2025-03-23 12:56:06,040 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 19/21, size: 50
+2025-03-23 12:56:06,040 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 20/21, size: 50
+2025-03-23 12:56:06,040 - __main__ - INFO - [20250323-125604-43832686] Sending chunk 21/21, size: 10
+2025-03-23 12:56:06,040 - __main__ - INFO - [20250323-125604-43832686] Stream completed successfully
+2025-03-23 12:56:22,755 - __main__ - INFO - [20250323-125622-43832686] New stream request received
+2025-03-23 12:56:22,755 - __main__ - INFO - [20250323-125622-43832686] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.68', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.158.68', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '1206', 'Cf-Ray': '92507de21846fa5a-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:56:22,755 - __main__ - INFO - [20250323-125622-43832686] Client IP: 127.0.0.1
+2025-03-23 12:56:22,755 - __main__ - INFO - [20250323-125622-43832686] Method: POST
+2025-03-23 12:56:22,756 - __main__ - INFO - [20250323-125622-43832686] Message length: 19
+2025-03-23 12:56:22,756 - __main__ - INFO - [20250323-125622-43832686] History items: 2
+2025-03-23 12:56:22,756 - __main__ - INFO - [20250323-125622-43832686] Fetching market data...
+2025-03-23 12:56:22,756 - __main__ - INFO - [20250323-125622-43832686] Market data fetched successfully
+2025-03-23 12:56:22,756 - __main__ - INFO - [20250323-125622-43832686] Market context prepared
+2025-03-23 12:56:22,756 - __main__ - INFO - [20250323-125622-43832686] Initializing Gemini model...
+2025-03-23 12:56:22,757 - __main__ - INFO - [20250323-125622-43832686] Generating content with Gemini...
+2025-03-23 12:56:24,056 - __main__ - INFO - [20250323-125622-43832686] Generated response length: 827
+2025-03-23 12:56:24,056 - __main__ - INFO - [20250323-125622-43832686] First 100 chars: Namaste!  The Indian markets are showing moderate growth.  For long-term growth, consider a diversif
+2025-03-23 12:56:24,056 - __main__ - INFO - [20250323-125622-43832686] Setting up response stream...
+2025-03-23 12:56:24,057 - __main__ - INFO - [20250323-125622-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:56:24,057 - __main__ - INFO - [20250323-125622-43832686] Starting stream with 17 chunks
+2025-03-23 12:56:24,057 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 1/17, size: 50
+2025-03-23 12:56:24,057 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:56:24] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:56:24,057 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 2/17, size: 50
+2025-03-23 12:56:24,058 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 3/17, size: 50
+2025-03-23 12:56:24,058 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 4/17, size: 50
+2025-03-23 12:56:24,058 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 5/17, size: 50
+2025-03-23 12:56:24,058 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 6/17, size: 50
+2025-03-23 12:56:24,059 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 7/17, size: 50
+2025-03-23 12:56:24,059 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 8/17, size: 50
+2025-03-23 12:56:24,059 - __main__ - INFO - [20250323-125622-43832686] Sending chunk 9/17, size: 50
+2025-03-23 12:56:24,063 - __main__ - INFO - [20250323-125624-43832686] New stream request received
+2025-03-23 12:56:24,063 - __main__ - INFO - [20250323-125624-43832686] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '1206', 'Cf-Ray': '92507de21846fa5a-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:56:24,063 - __main__ - INFO - [20250323-125624-43832686] Client IP: 127.0.0.1
+2025-03-23 12:56:24,063 - __main__ - INFO - [20250323-125624-43832686] Method: POST
+2025-03-23 12:56:24,063 - __main__ - INFO - [20250323-125624-43832686] Message length: 19
+2025-03-23 12:56:24,064 - __main__ - INFO - [20250323-125624-43832686] History items: 2
+2025-03-23 12:56:24,064 - __main__ - INFO - [20250323-125624-43832686] Fetching market data...
+2025-03-23 12:56:24,064 - __main__ - INFO - [20250323-125624-43832686] Market data fetched successfully
+2025-03-23 12:56:24,064 - __main__ - INFO - [20250323-125624-43832686] Market context prepared
+2025-03-23 12:56:24,064 - __main__ - INFO - [20250323-125624-43832686] Initializing Gemini model...
+2025-03-23 12:56:24,064 - __main__ - INFO - [20250323-125624-43832686] Generating content with Gemini...
+2025-03-23 12:56:25,602 - __main__ - INFO - [20250323-125624-43832686] Generated response length: 962
+2025-03-23 12:56:25,602 - __main__ - INFO - [20250323-125624-43832686] First 100 chars: Namaste!  The Indian markets are showing moderate growth.  For long-term wealth creation, consider a
+2025-03-23 12:56:25,603 - __main__ - INFO - [20250323-125624-43832686] Setting up response stream...
+2025-03-23 12:56:25,603 - __main__ - INFO - [20250323-125624-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:56:25,604 - __main__ - INFO - [20250323-125624-43832686] Starting stream with 20 chunks
+2025-03-23 12:56:25,604 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 1/20, size: 50
+2025-03-23 12:56:25,604 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:56:25] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:56:25,605 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 2/20, size: 50
+2025-03-23 12:56:25,605 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 3/20, size: 50
+2025-03-23 12:56:25,605 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 4/20, size: 50
+2025-03-23 12:56:25,605 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 5/20, size: 50
+2025-03-23 12:56:25,605 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 6/20, size: 50
+2025-03-23 12:56:25,605 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 7/20, size: 50
+2025-03-23 12:56:25,605 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 8/20, size: 50
+2025-03-23 12:56:25,606 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 9/20, size: 50
+2025-03-23 12:56:25,606 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 10/20, size: 50
+2025-03-23 12:56:25,606 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 11/20, size: 50
+2025-03-23 12:56:25,606 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 12/20, size: 50
+2025-03-23 12:56:25,606 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 13/20, size: 50
+2025-03-23 12:56:25,606 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 14/20, size: 50
+2025-03-23 12:56:25,606 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 15/20, size: 50
+2025-03-23 12:56:25,607 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 16/20, size: 50
+2025-03-23 12:56:25,607 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 17/20, size: 50
+2025-03-23 12:56:25,607 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 18/20, size: 50
+2025-03-23 12:56:25,607 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 19/20, size: 50
+2025-03-23 12:56:25,607 - __main__ - INFO - [20250323-125624-43832686] Sending chunk 20/20, size: 12
+2025-03-23 12:56:25,607 - __main__ - INFO - [20250323-125624-43832686] Stream completed successfully
+2025-03-23 12:56:35,537 - __main__ - INFO - [20250323-125635-43832686] New stream request received
+2025-03-23 12:56:35,537 - __main__ - INFO - [20250323-125635-43832686] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '172.71.158.68', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba, 172.71.158.68', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '2318', 'Cf-Ray': '92507e31fe10fa5a-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:56:35,537 - __main__ - INFO - [20250323-125635-43832686] Client IP: 127.0.0.1
+2025-03-23 12:56:35,537 - __main__ - INFO - [20250323-125635-43832686] Method: POST
+2025-03-23 12:56:35,538 - __main__ - INFO - [20250323-125635-43832686] Message length: 53
+2025-03-23 12:56:35,538 - __main__ - INFO - [20250323-125635-43832686] History items: 4
+2025-03-23 12:56:35,538 - __main__ - INFO - [20250323-125635-43832686] Fetching market data...
+2025-03-23 12:56:35,538 - __main__ - INFO - [20250323-125635-43832686] Market data fetched successfully
+2025-03-23 12:56:35,538 - __main__ - INFO - [20250323-125635-43832686] Market context prepared
+2025-03-23 12:56:35,538 - __main__ - INFO - [20250323-125635-43832686] Initializing Gemini model...
+2025-03-23 12:56:35,538 - __main__ - INFO - [20250323-125635-43832686] Generating content with Gemini...
+2025-03-23 12:56:37,228 - __main__ - INFO - [20250323-125635-43832686] Generated response length: 1042
+2025-03-23 12:56:37,228 - __main__ - INFO - [20250323-125635-43832686] First 100 chars: Namaste!  Given the current market showing positive growth in major indices like Nifty and Sensex, a
+2025-03-23 12:56:37,228 - __main__ - INFO - [20250323-125635-43832686] Setting up response stream...
+2025-03-23 12:56:37,229 - __main__ - INFO - [20250323-125635-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:56:37,229 - __main__ - INFO - [20250323-125635-43832686] Starting stream with 21 chunks
+2025-03-23 12:56:37,229 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 1/21, size: 50
+2025-03-23 12:56:37,229 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:56:37] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:56:37,230 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 2/21, size: 50
+2025-03-23 12:56:37,230 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 3/21, size: 50
+2025-03-23 12:56:37,230 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 4/21, size: 50
+2025-03-23 12:56:37,230 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 5/21, size: 50
+2025-03-23 12:56:37,231 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 6/21, size: 50
+2025-03-23 12:56:37,231 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 7/21, size: 50
+2025-03-23 12:56:37,231 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 8/21, size: 50
+2025-03-23 12:56:37,231 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 9/21, size: 50
+2025-03-23 12:56:37,231 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 10/21, size: 50
+2025-03-23 12:56:37,231 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 11/21, size: 50
+2025-03-23 12:56:37,231 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 12/21, size: 50
+2025-03-23 12:56:37,232 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 13/21, size: 50
+2025-03-23 12:56:37,232 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 14/21, size: 50
+2025-03-23 12:56:37,232 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 15/21, size: 50
+2025-03-23 12:56:37,232 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 16/21, size: 50
+2025-03-23 12:56:37,232 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 17/21, size: 50
+2025-03-23 12:56:37,232 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 18/21, size: 50
+2025-03-23 12:56:37,232 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 19/21, size: 50
+2025-03-23 12:56:37,232 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 20/21, size: 50
+2025-03-23 12:56:37,233 - __main__ - INFO - [20250323-125635-43832686] Sending chunk 21/21, size: 42
+2025-03-23 12:56:37,233 - __main__ - INFO - [20250323-125635-43832686] Stream completed successfully
+2025-03-23 12:56:37,239 - __main__ - INFO - [20250323-125637-43832686] New stream request received
+2025-03-23 12:56:37,240 - __main__ - INFO - [20250323-125637-43832686] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '2318', 'Cf-Ray': '92507e31fe10fa5a-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:9a88:42c9:f27:4aba', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Android"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?1', 'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:56:37,240 - __main__ - INFO - [20250323-125637-43832686] Client IP: 127.0.0.1
+2025-03-23 12:56:37,240 - __main__ - INFO - [20250323-125637-43832686] Method: POST
+2025-03-23 12:56:37,240 - __main__ - INFO - [20250323-125637-43832686] Message length: 53
+2025-03-23 12:56:37,241 - __main__ - INFO - [20250323-125637-43832686] History items: 4
+2025-03-23 12:56:37,241 - __main__ - INFO - [20250323-125637-43832686] Fetching market data...
+2025-03-23 12:56:37,241 - __main__ - INFO - [20250323-125637-43832686] Market data fetched successfully
+2025-03-23 12:56:37,241 - __main__ - INFO - [20250323-125637-43832686] Market context prepared
+2025-03-23 12:56:37,241 - __main__ - INFO - [20250323-125637-43832686] Initializing Gemini model...
+2025-03-23 12:56:37,241 - __main__ - INFO - [20250323-125637-43832686] Generating content with Gemini...
+2025-03-23 12:56:38,701 - __main__ - INFO - [20250323-125637-43832686] Generated response length: 886
+2025-03-23 12:56:38,701 - __main__ - INFO - [20250323-125637-43832686] First 100 chars: Namaste!  Given the current market upswing (Nifty at 22000), a long-term strategy focusing on divers
+2025-03-23 12:56:38,701 - __main__ - INFO - [20250323-125637-43832686] Setting up response stream...
+2025-03-23 12:56:38,702 - __main__ - INFO - [20250323-125637-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:56:38,702 - __main__ - INFO - [20250323-125637-43832686] Starting stream with 18 chunks
+2025-03-23 12:56:38,702 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 1/18, size: 50
+2025-03-23 12:56:38,702 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:56:38] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:56:38,703 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 2/18, size: 50
+2025-03-23 12:56:38,703 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 3/18, size: 50
+2025-03-23 12:56:38,703 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 4/18, size: 50
+2025-03-23 12:56:38,703 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 5/18, size: 50
+2025-03-23 12:56:38,704 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 6/18, size: 50
+2025-03-23 12:56:38,704 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 7/18, size: 50
+2025-03-23 12:56:38,704 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 8/18, size: 50
+2025-03-23 12:56:38,704 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 9/18, size: 50
+2025-03-23 12:56:38,704 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 10/18, size: 50
+2025-03-23 12:56:38,704 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 11/18, size: 50
+2025-03-23 12:56:38,704 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 12/18, size: 50
+2025-03-23 12:56:38,705 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 13/18, size: 50
+2025-03-23 12:56:38,705 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 14/18, size: 50
+2025-03-23 12:56:38,705 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 15/18, size: 50
+2025-03-23 12:56:38,705 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 16/18, size: 50
+2025-03-23 12:56:38,705 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 17/18, size: 50
+2025-03-23 12:56:38,705 - __main__ - INFO - [20250323-125637-43832686] Sending chunk 18/18, size: 36
+2025-03-23 12:56:38,705 - __main__ - INFO - [20250323-125637-43832686] Stream completed successfully
+2025-03-23 12:57:03,281 - __main__ - INFO - [20250323-125703-43832686] New stream request received
+2025-03-23 12:57:03,282 - __main__ - INFO - [20250323-125703-43832686] Headers: {'Host': 'localhost:9000', 'X-Real-Ip': '162.158.167.148', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa, 162.158.167.148', 'X-Forwarded-Proto': 'http', 'Connection': 'upgrade', 'Content-Length': '85', 'Cf-Ray': '92507edefe537ada-SJC', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:57:03,282 - __main__ - INFO - [20250323-125703-43832686] Client IP: 127.0.0.1
+2025-03-23 12:57:03,282 - __main__ - INFO - [20250323-125703-43832686] Method: POST
+2025-03-23 12:57:03,282 - __main__ - INFO - [20250323-125703-43832686] Message length: 61
+2025-03-23 12:57:03,282 - __main__ - INFO - [20250323-125703-43832686] History items: 0
+2025-03-23 12:57:03,282 - __main__ - INFO - [20250323-125703-43832686] Fetching market data...
+2025-03-23 12:57:03,283 - __main__ - INFO - [20250323-125703-43832686] Market data fetched successfully
+2025-03-23 12:57:03,283 - __main__ - INFO - [20250323-125703-43832686] Market context prepared
+2025-03-23 12:57:03,283 - __main__ - INFO - [20250323-125703-43832686] Initializing Gemini model...
+2025-03-23 12:57:03,283 - __main__ - INFO - [20250323-125703-43832686] Generating content with Gemini...
+2025-03-23 12:57:04,901 - __main__ - INFO - [20250323-125703-43832686] Generated response length: 975
+2025-03-23 12:57:04,902 - __main__ - INFO - [20250323-125703-43832686] First 100 chars: Namaste!  I'm FinWise.  For long-term growth in the Indian market (Nifty 50 at 22000, Sensex at 7250
+2025-03-23 12:57:04,902 - __main__ - INFO - [20250323-125703-43832686] Setting up response stream...
+2025-03-23 12:57:04,902 - __main__ - INFO - [20250323-125703-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:57:04,903 - __main__ - INFO - [20250323-125703-43832686] Starting stream with 20 chunks
+2025-03-23 12:57:04,903 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 1/20, size: 50
+2025-03-23 12:57:04,903 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:57:04] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:57:04,904 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 2/20, size: 50
+2025-03-23 12:57:04,904 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 3/20, size: 50
+2025-03-23 12:57:04,904 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 4/20, size: 50
+2025-03-23 12:57:04,904 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 5/20, size: 50
+2025-03-23 12:57:04,904 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 6/20, size: 50
+2025-03-23 12:57:04,904 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 7/20, size: 50
+2025-03-23 12:57:04,904 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 8/20, size: 50
+2025-03-23 12:57:04,905 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 9/20, size: 50
+2025-03-23 12:57:04,905 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 10/20, size: 50
+2025-03-23 12:57:04,905 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 11/20, size: 50
+2025-03-23 12:57:04,905 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 12/20, size: 50
+2025-03-23 12:57:04,905 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 13/20, size: 50
+2025-03-23 12:57:04,905 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 14/20, size: 50
+2025-03-23 12:57:04,905 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 15/20, size: 50
+2025-03-23 12:57:04,905 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 16/20, size: 50
+2025-03-23 12:57:04,906 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 17/20, size: 50
+2025-03-23 12:57:04,906 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 18/20, size: 50
+2025-03-23 12:57:04,906 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 19/20, size: 50
+2025-03-23 12:57:04,906 - __main__ - INFO - [20250323-125703-43832686] Sending chunk 20/20, size: 25
+2025-03-23 12:57:04,906 - __main__ - INFO - [20250323-125703-43832686] Stream completed successfully
+2025-03-23 12:57:04,911 - __main__ - INFO - [20250323-125704-43832686] New stream request received
+2025-03-23 12:57:04,912 - __main__ - INFO - [20250323-125704-43832686] Headers: {'Host': 'localhost:9000', 'Connection': 'close', 'Content-Length': '85', 'Cf-Ray': '92507edefe537ada-SJC', 'X-Forwarded-For': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cf-Ipcountry': 'US', 'Accept-Encoding': 'gzip, br', 'Priority': 'u=1, i', 'X-Forwarded-Proto': 'https', 'Accept-Language': 'en-US,en;q=0.9,es;q=0.8', 'Referer': 'https://finwise.rerecreation.us/', 'Cf-Visitor': '{"scheme":"https"}', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Cf-Connecting-Ip': '2601:646:9000:1df0:1c82:7c3b:54fb:29fa', 'Cdn-Loop': 'cloudflare; loops=1', 'Sec-Fetch-Site': 'same-origin', 'Origin': 'https://finwise.rerecreation.us', 'Sec-Ch-Ua-Platform': '"Windows"', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Sec-Ch-Ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'Accept': 'text/plain, application/json', 'Content-Type': 'application/json'}
+2025-03-23 12:57:04,912 - __main__ - INFO - [20250323-125704-43832686] Client IP: 127.0.0.1
+2025-03-23 12:57:04,912 - __main__ - INFO - [20250323-125704-43832686] Method: POST
+2025-03-23 12:57:04,912 - __main__ - INFO - [20250323-125704-43832686] Message length: 61
+2025-03-23 12:57:04,913 - __main__ - INFO - [20250323-125704-43832686] History items: 0
+2025-03-23 12:57:04,913 - __main__ - INFO - [20250323-125704-43832686] Fetching market data...
+2025-03-23 12:57:04,913 - __main__ - INFO - [20250323-125704-43832686] Market data fetched successfully
+2025-03-23 12:57:04,913 - __main__ - INFO - [20250323-125704-43832686] Market context prepared
+2025-03-23 12:57:04,913 - __main__ - INFO - [20250323-125704-43832686] Initializing Gemini model...
+2025-03-23 12:57:04,913 - __main__ - INFO - [20250323-125704-43832686] Generating content with Gemini...
+2025-03-23 12:57:06,349 - __main__ - INFO - [20250323-125704-43832686] Generated response length: 781
+2025-03-23 12:57:06,349 - __main__ - INFO - [20250323-125704-43832686] First 100 chars: Namaste!  FinWise here.  For long-term growth in the Indian market (Nifty 50 at 22000, Sensex at 725
+2025-03-23 12:57:06,349 - __main__ - INFO - [20250323-125704-43832686] Setting up response stream...
+2025-03-23 12:57:06,350 - __main__ - INFO - [20250323-125704-43832686] Response headers set: {'Content-Type': 'text/plain; charset=utf-8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Expose-Headers': '*', 'Cache-Control': 'no-cache, no-store, must-revalidate, max-age=0', 'Pragma': 'no-cache', 'Expires': '0', 'X-Accel-Buffering': 'no', 'Transfer-Encoding': 'chunked'}
+2025-03-23 12:57:06,350 - __main__ - INFO - [20250323-125704-43832686] Starting stream with 16 chunks
+2025-03-23 12:57:06,350 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 1/16, size: 50
+2025-03-23 12:57:06,351 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:57:06] "POST /stream HTTP/1.1" 200 -
+2025-03-23 12:57:06,351 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 2/16, size: 50
+2025-03-23 12:57:06,351 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 3/16, size: 50
+2025-03-23 12:57:06,351 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 4/16, size: 50
+2025-03-23 12:57:06,352 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 5/16, size: 50
+2025-03-23 12:57:06,352 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 6/16, size: 50
+2025-03-23 12:57:06,352 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 7/16, size: 50
+2025-03-23 12:57:06,352 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 8/16, size: 50
+2025-03-23 12:57:06,352 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 9/16, size: 50
+2025-03-23 12:57:06,352 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 10/16, size: 50
+2025-03-23 12:57:06,352 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 11/16, size: 50
+2025-03-23 12:57:06,353 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 12/16, size: 50
+2025-03-23 12:57:06,353 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 13/16, size: 50
+2025-03-23 12:57:06,353 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 14/16, size: 50
+2025-03-23 12:57:06,353 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 15/16, size: 50
+2025-03-23 12:57:06,353 - __main__ - INFO - [20250323-125704-43832686] Sending chunk 16/16, size: 31
+2025-03-23 12:57:06,353 - __main__ - INFO - [20250323-125704-43832686] Stream completed successfully
+2025-03-23 12:57:18,375 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:57:18,376 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:57:18] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:57:18,827 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:57:18,828 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:57:18] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:57:44,149 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:57:44,149 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:57:44] "GET /ping HTTP/1.1" 200 -
+2025-03-23 12:57:44,296 - __main__ - INFO - Ping request received from 127.0.0.1
+2025-03-23 12:57:44,296 - werkzeug - INFO - 127.0.0.1 - - [23/Mar/2025 12:57:44] "GET /ping HTTP/1.1" 200 -
