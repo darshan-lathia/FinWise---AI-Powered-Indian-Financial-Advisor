@@ -1,0 +1,85 @@
+/* Fix for scrolling issues */
+.message-list {
+  flex: 1;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-bottom: 100px !important; 
+  height: calc(100vh - 100px) !important;
+  position: relative;
+  -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on iOS */
+  scroll-behavior: smooth !important;
+}
+
+.chat-input-container {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 300px;
+  right: 0;
+  padding: 12px 16px !important;
+  background-color: #f9f9f8;
+  border-top: 1px solid #e0e0e0;
+  z-index: 100;
+}
+
+.chat-input {
+  min-height: 24px !important;
+  max-height: 120px !important;
+  height: auto !important;
+  line-height: 24px !important;
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  resize: none !important;
+  overflow-y: auto !important;
+}
+
+/* Mobile header styles */
+.mobile-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 8px 16px !important;
+  height: 48px !important;
+  background-color: #f9f9f8;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 100;
+  display: none !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .chat-input-container {
+    left: 0 !important;
+    bottom: 60px !important;
+    padding: 8px 12px !important;
+  }
+  
+  .message-list {
+    margin-top: 48px !important;
+    height: calc(100vh - 168px) !important;
+    padding-bottom: 80px !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .chat-input {
+    padding: 6px 10px !important;
+    min-height: 20px !important;
+    max-height: 100px !important;
+  }
+}
+
+.dark-mode .chat-input-container {
+  background-color: #121212;
+  border-top-color: #333;
+}
+
+.dark-mode .mobile-header {
+  background-color: #121212;
+  border-bottom-color: #333;
+} 

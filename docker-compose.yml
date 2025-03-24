@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./client-react
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client-react:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://backend:9000
+      - VITE_ENV=development
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./server-python
+      dockerfile: Dockerfile.dev
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./server-python:/app
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - PORT=9000
+      - ENV=development
+      - CORS_ORIGINS=http://localhost:3000
+      - DEBUG=true
+
+volumes:
+  node_modules: 

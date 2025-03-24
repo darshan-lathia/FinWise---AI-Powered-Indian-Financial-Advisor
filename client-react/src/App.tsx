@@ -18,11 +18,9 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import './App.css';
-
-interface Message {
-  role: 'user' | 'model';
-  content: string;
-}
+import './styles/ScrollFix.css';
+import MessageDisplay from './components/MessageDisplay';
+import { Message } from './types';
 
 function App() {
   const [input, setInput] = useState('');
@@ -164,10 +162,24 @@ function App() {
     if (!input.trim()) return;
 
     // Add user message to chat
-    const userMessage: Message = { role: 'user', content: input };
+    const userMessage: Message = { 
+      role: 'user', 
+      content: input,
+      id: `user-${Date.now()}`,
+      status: 'complete'
+    };
     setChatHistory([...chatHistory, userMessage]);
     setInput('');
-    setIsTyping(true);
+
+    // Add an initial response message with loading state
+    const responseId = `ai-${Date.now()}`;
+    const loadingMessage: Message = {
+      role: 'model',
+      content: '',
+      id: responseId,
+      status: 'loading'
+    };
+    setChatHistory(prev => [...prev, loadingMessage]);
 
     try {
       const historyForApi = chatHistory.map((msg) => ({
@@ -175,137 +187,110 @@ function App() {
         parts: [{ text: msg.content }]
       }));
 
-      const endpoint = isStreaming ? '/stream' : '/chat';
-      const apiUrl = `${getApiBaseUrl()}${endpoint}`;
+      // Use non-streaming endpoint for improved reliability
+      const apiUrl = `${getApiBaseUrl()}/chat`;
       
       console.log(`Sending request to: ${apiUrl}`);
       
-      if (isStreaming) {
-        let response;
-        try {
-          response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'text/plain, application/json',
-              'Cache-Control': 'no-cache',
-              'Pragma': 'no-cache'
-            },
-            credentials: 'omit', // Don't send credentials in incognito
-            body: JSON.stringify({
-              chat: input,
-              history: historyForApi
-            }),
-          });
-          
-          if (!response.ok) {
-            throw new Error(`API error: ${response.status} ${response.statusText}`);
-          }
-        } catch (fetchError) {
-          console.error("Fetch error:", fetchError);
-          setChatHistory(prev => [...prev, { 
-            role: 'model', 
-            content: `Sorry, there was an error connecting to the server: ${fetchError.message}` 
-          }]);
-          setIsTyping(false);
-          return;
+      // Detect if user is on mobile or has slow connection
+      // The navigator.connection API is experimental, so we need to check if it exists
+      let connectionSpeed = 'fast';
+      if ('connection' in navigator && (navigator as any).connection) {
+        const netInfo = (navigator as any).connection;
+        if (netInfo.effectiveType === '3g' || netInfo.effectiveType === '2g' || netInfo.saveData) {
+          connectionSpeed = 'slow';
         }
-
-        // Add an empty message from the model to start with
-        setChatHistory(prev => [...prev, { role: 'model', content: '' }]);
+      }
+      
+      const isMobileOrSlow = isMobile || connectionSpeed === 'slow';
+      
+      // Set a timeout based on device type
+      const timeoutDuration = isMobileOrSlow ? 15000 : 30000;
+      
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Request timed out')), timeoutDuration);
+      });
+      
+      const controller = new AbortController();
+      const signal = controller.signal;
+      
+      // Set up a timeout to abort the fetch if it takes too long
+      const timeoutId = setTimeout(() => controller.abort(), timeoutDuration);
+      
+      const fetchPromise = fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Cache-Control': 'no-cache',
+          'Pragma': 'no-cache'
+        },
+        credentials: 'omit',
+        signal,
+        body: JSON.stringify({
+          chat: input,
+          history: historyForApi
+        }),
+      });
+      
+      try {
+        // Use Promise.race to implement timeout
+        const response = await Promise.race([fetchPromise, timeoutPromise]) as Response;
         
-        const reader = response.body?.getReader();
-        const decoder = new TextDecoder();
+        // Clear the timeout since we got a response
+        clearTimeout(timeoutId);
         
-        if (reader) {
-          let modelResponse = '';
-          
-          try {
-            while (true) {
-              const { done, value } = await reader.read();
-              
-              if (done) {
-                if (!modelResponse.trim()) {
-                  throw new Error('No response received from server');
-                }
-                break;
-              }
-              
-              const chunk = decoder.decode(value);
-              modelResponse += chunk;
-              
-              setChatHistory(prev => {
-                const newHistory = [...prev];
-                newHistory[newHistory.length - 1] = {
-                  role: 'model', 
-                  content: modelResponse
-                };
-                return newHistory;
-              });
-            }
-          } catch (streamError) {
-            console.error("Stream reading error:", streamError);
-            setChatHistory(prev => {
-              const newHistory = [...prev];
-              if (!newHistory[newHistory.length - 1].content.trim()) {
-                newHistory[newHistory.length - 1] = {
-                  role: 'model', 
-                  content: `Sorry, there was an error processing the response: ${streamError.message}`
-                };
-              }
-              return newHistory;
-            });
-          } finally {
-            reader.releaseLock();
-          }
+        if (!response.ok) {
+          throw new Error(`Server error: ${response.status} ${response.statusText}`);
         }
-      } else {
-        // Non-streaming approach
-        let response;
-        try {
-          response = await fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-              'Cache-Control': 'no-cache',
-              'Pragma': 'no-cache'
-            },
-            credentials: 'omit',
-            body: JSON.stringify({
-              chat: input,
-              history: historyForApi
-            }),
-          });
-          
-          if (!response.ok) {
-            throw new Error(`API error: ${response.status} ${response.statusText}`);
-          }
-          
-          const data = await response.json();
-          setChatHistory(prev => [...prev, { role: 'model', content: data.text }]);
-        } catch (fetchError) {
-          console.error("Fetch error:", fetchError);
-          setChatHistory(prev => [...prev, { 
-            role: 'model', 
-            content: `Sorry, there was an error with the request: ${fetchError.message}` 
-          }]);
+        
+        const data = await response.json();
+        
+        // Update the loading message with the response content
+        setChatHistory(prev => 
+          prev.map(msg => 
+            msg.id === responseId 
+              ? { ...msg, content: data.text, status: 'complete' } 
+              : msg
+          )
+        );
+      } catch (error) {
+        // Check if this was an abort error (from our own timeout)
+        if (error.name === 'AbortError') {
+          throw new Error('Request timed out');
         }
+        throw error;
       }
     } catch (error) {
       console.error('Error:', error);
-      setChatHistory(prev => [...prev, { 
-        role: 'model', 
-        content: 'Sorry, there was an error processing your request.' 
-      }]);
-    } finally {
-      setIsTyping(false);
       
-      // Focus back on input after response
-      if (inputRef.current) {
-        inputRef.current.focus();
-      }
+      // Update the loading message with error content
+      setChatHistory(prev => 
+        prev.map(msg => 
+          msg.id === responseId 
+            ? { 
+                ...msg, 
+                content: isMobile 
+                  ? `Sorry, there was an error. Please try a shorter question or try again later.` 
+                  : `Sorry, there was an error: ${error.message}`, 
+                status: 'error' 
+              } 
+            : msg
+        )
+      );
     }
+  };
+
+  // Function to retry a failed message
+  const handleRetry = (messageId: string, originalQuestion: string) => {
+    // Find the failed message and remove it
+    setChatHistory(prev => prev.filter(msg => msg.id !== messageId));
+    
+    // Set the input to the original question
+    setInput(originalQuestion);
+    
+    // Optionally auto-submit
+    // handleSubmit(new Event('submit') as React.FormEvent);
   };
 
   const handleSuggestionClick = (suggestion: string) => {
@@ -357,57 +342,22 @@ function App() {
   // Brand color - adjust based on dark mode
   const brandColor = darkMode ? '#6bb5ff' : '#0B0B45';
 
-  const renderMessage = (message: Message) => {
-    if (message.role === 'user') {
-      return (
-        <div className={`message user-message ${darkMode ? 'dark-mode' : ''}`}>
-          <div className="message-content">
-            {message.content}
-          </div>
-        </div>
-      );
-    }
-
-    // Split the message into parts (main text, disclaimer, suggestions)
-    const parts = message.content.split('\n\n');
-    const mainText = parts.slice(0, -2).join('\n\n');
-    const disclaimer = parts[parts.length - 2]?.includes('*') ? parts[parts.length - 2] : '';
-    const suggestionsText = parts[parts.length - 1];
-
-    // Extract suggestions (looking for lines starting with specific emojis)
-    const suggestions = suggestionsText
-      ?.split('\n')
-      .filter(line => line.match(/^[🤔📈💰💡]/))
-      .map(line => line.trim())
-      .filter(line => line.length > 0);
-
+  // Render a message based on its type
+  const renderMessage = (message: Message, index: number) => {
+    // Find the preceding user message for retry functionality
+    const userMessageIndex = message.role === 'model' ? 
+      chatHistory.findIndex((msg, i) => i < index && msg.role === 'user') : -1;
+    
+    const userMessage = userMessageIndex >= 0 ? chatHistory[userMessageIndex].content : '';
+    
     return (
-      <div className={`message model-message ${darkMode ? 'dark-mode' : ''}`}>
-        <div className="message-content">
-          <div className="markdown-content">
-            <ReactMarkdown>{mainText}</ReactMarkdown>
-          </div>
-          {disclaimer && (
-            <div className="disclaimer">
-              <ReactMarkdown>{disclaimer}</ReactMarkdown>
-            </div>
-          )}
-        </div>
-        {suggestions && suggestions.length > 0 && (
-          <div className="suggestions-container">
-            <div className="suggestions-scroll">
-              {[...suggestions, ...suggestions].map((suggestion, index) => (
-                <div
-                  key={index}
-                  className="suggestion-box"
-                  onClick={() => handleSuggestionClick(suggestion)}
-                >
-                  {suggestion}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+      <div key={message.id || index} className="message-wrapper">
+        <MessageDisplay 
+          message={message} 
+          darkMode={darkMode || false} 
+          onRetry={message.status === 'error' && message.id ? 
+            () => handleRetry(message.id as string, userMessage) : undefined} 
+        />
       </div>
     );
   };
@@ -444,6 +394,19 @@ function App() {
           >
             <BookmarkIcon />
             Spaces
+          </div>
+          <div 
+            className="nav-item dark-mode-toggle"
+            onClick={toggleDarkMode}
+            style={{ 
+              marginTop: 'auto', 
+              marginBottom: '20px',
+              opacity: 0.8,
+              cursor: 'pointer'
+            }}
+          >
+            {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+            {darkMode ? 'Light Mode' : 'Dark Mode'}
           </div>
         </nav>
         
@@ -484,18 +447,13 @@ function App() {
       <main className="main-content">
         {/* Mobile header */}
         {isMobile && (
-          <div style={{ 
-            padding: '16px 16px 0', 
-            display: 'flex', 
-            alignItems: 'center',
-            justifyContent: 'space-between'
-          }}>
+          <div className="mobile-header">
             <div 
               style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} 
               onClick={() => setChatHistory([])}
             >
-              <MonetizationOnIcon sx={{ color: brandColor, fontSize: 24, mr: 1 }} />
-              <Typography variant="subtitle1" sx={{ fontWeight: 600, color: brandColor }}>
+              <MonetizationOnIcon sx={{ color: brandColor, fontSize: 20, mr: 1 }} />
+              <Typography variant="subtitle2" sx={{ fontWeight: 600, color: brandColor }}>
                 FinWise
               </Typography>
             </div>
@@ -506,13 +464,12 @@ function App() {
                   background: 'transparent',
                   border: 'none',
                   cursor: 'pointer',
-                  padding: '8px',
-                  marginRight: '8px',
+                  padding: '4px',
                   color: darkMode ? '#e6e6e6' : '#666'
                 }}
                 aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
               >
-                {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+                {darkMode ? <Brightness7Icon sx={{ fontSize: 20 }} /> : <Brightness4Icon sx={{ fontSize: 20 }} />}
               </button>
             </div>
           </div>
@@ -631,13 +588,24 @@ function App() {
                 {/* Chat Input */}
                 <div className="chat-input-container">
                   <form className="chat-input-form" onSubmit={handleSubmit}>
-                    <input
-                      ref={inputRef}
-                      type="text"
+                    <textarea
+                      ref={inputRef as any}
                       className="chat-input"
                       placeholder="Ask anything..."
                       value={input}
-                      onChange={(e) => setInput(e.target.value)}
+                      onChange={(e) => {
+                        setInput(e.target.value);
+                        // Auto-adjust height
+                        e.target.style.height = 'auto';
+                        e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px`;
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                          e.preventDefault();
+                          handleSubmit(e as any);
+                        }
+                      }}
+                      rows={1}
                     />
                     <button 
                       type="submit" 
@@ -665,31 +633,32 @@ function App() {
               </div>
             ) : (
               <>
-                <div className="message-list">
-                  {chatHistory.map((message, index) => (
-                    renderMessage(message))
-                  )}
-                  {isTyping && (
-                    <div className="message-item ai-message">
-                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <CircularProgress size={16} thickness={6} sx={{ mr: 2, color: brandColor }} />
-                        <Typography>Thinking...</Typography>
-                      </Box>
-                    </div>
-                  )}
+                <div className="message-list" style={{ flex: 1, overflowY: "auto", overflowX: "hidden", paddingBottom: "80px" }}>
+                  {chatHistory.map((message, index) => renderMessage(message, index))}
                   <div ref={messagesEndRef} />
                 </div>
                 
                 {/* Chat Input for conversations */}
                 <div className="chat-input-container" style={{ margin: '20px auto 40px' }}>
                   <form className="chat-input-form" onSubmit={handleSubmit}>
-                    <input
-                      ref={inputRef}
-                      type="text"
+                    <textarea
+                      ref={inputRef as any}
                       className="chat-input"
                       placeholder="Ask follow-up questions..."
                       value={input}
-                      onChange={(e) => setInput(e.target.value)}
+                      onChange={(e) => {
+                        setInput(e.target.value);
+                        // Auto-adjust height
+                        e.target.style.height = 'auto';
+                        e.target.style.height = `${Math.min(e.target.scrollHeight, 120)}px`;
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                          e.preventDefault();
+                          handleSubmit(e as any);
+                        }
+                      }}
+                      rows={1}
                       disabled={isTyping}
                     />
                     <button 
@@ -705,27 +674,6 @@ function App() {
               </>
             )}
           </>
-        )}
-        
-        {/* Footer - hidden on smaller mobiles */}
-        {shouldShowFooter && (
-          <footer className="footer">
-            <a href="#" className="footer-link">Pro</a>
-            <a href="#" className="footer-link">Blog</a>
-            <a href="#" className="footer-link">Careers</a>
-            <a href="#" className="footer-link">
-              <LanguageIcon sx={{ fontSize: 16, mr: 0.5 }} />
-              English
-            </a>
-            {!isMobile && (
-              <a href="#" className="footer-link" style={{ marginLeft: 'auto' }} onClick={toggleDarkMode}>
-                {darkMode ? <Brightness7Icon sx={{ fontSize: 18 }} /> : <Brightness4Icon sx={{ fontSize: 18 }} />}
-              </a>
-            )}
-            <a href="#" className="footer-link" style={{ marginLeft: isMobile ? 'auto' : '8px' }}>
-              <HelpOutlineIcon sx={{ fontSize: 18 }} />
-            </a>
-          </footer>
         )}
         
         {/* Mobile Navigation */}

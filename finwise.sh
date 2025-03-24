@@ -1,15 +1,26 @@
 #!/bin/bash
 
 # FinWise Application Management Script
-# Usage: ./finwise.sh [command]
+# Usage: ./finwise.sh [command] [environment]
+
+# Default environment
+ENV=${2:-development}
 
 # Configuration
 CLIENT_DIR="$(pwd)/client-react"
 SERVER_DIR="$(pwd)/server-python"
 LOG_DIR="$(pwd)/logs"
 PID_DIR="$(pwd)/var/run"
-SERVER_PORT=9000
-CLIENT_PORT=3000
+
+# Load port configuration based on environment
+if [[ "$ENV" == "production" ]]; then
+    SERVER_PORT=9000
+    CLIENT_PORT=3000
+else
+    SERVER_PORT=9001
+    CLIENT_PORT=3001
+fi
+
 NGINX_CONF="/opt/homebrew/etc/nginx/servers/finwise.conf"
 
 # Create necessary directories
@@ -37,7 +48,7 @@ NC='\033[0m' # No Color
 show_usage() {
     echo -e "${BLUE}FinWise Application Management Script${NC}"
     echo ""
-    echo "Usage: ./finwise.sh [command]"
+    echo "Usage: ./finwise.sh [command] [environment]"
     echo ""
     echo "Commands:"
     echo "  start        - Start both client and server"
@@ -54,13 +65,19 @@ show_usage() {
     echo "  nginx reload - Reload Nginx configuration"
     echo "  nginx status - Check detailed Nginx status"
     echo "  analyze      - Run basic system checks"
+    echo "  deploy dev   - Deploy to development environment"
+    echo "  deploy prod  - Deploy to production environment"
     echo "  help         - Show this help message"
+    echo ""
+    echo "Environments:"
+    echo "  development  - Development environment (default)"
+    echo "  production   - Production environment"
     echo ""
 }
 
 # Function to start the server
 start_server() {
-    echo -e "${BLUE}Starting FinWise server...${NC}"
+    echo -e "${BLUE}Starting FinWise server in ${ENV} mode...${NC}"
     cd "$SERVER_DIR" || exit 1
     
     # Check if server is already running
@@ -80,7 +97,9 @@ start_server() {
         source venv/bin/activate
     fi
     
-    # Start the server
+    # Start the server with environment-specific configuration
+    cp ".env.${ENV}" .env
+    export FLASK_ENV="${ENV}"
     nohup python app.py > "$LOG_DIR/server.log" 2>&1 &
     SERVER_PID=$!
     echo $SERVER_PID > "$PID_DIR/server.pid"
@@ -96,7 +115,7 @@ start_server() {
 
 # Function to start the client
 start_client() {
-    echo -e "${BLUE}Starting FinWise client...${NC}"
+    echo -e "${BLUE}Starting FinWise client in ${ENV} mode...${NC}"
     cd "$CLIENT_DIR" || exit 1
     
     # Check if client is already running
@@ -111,8 +130,16 @@ start_client() {
         fi
     fi
     
-    # Start the client
-    nohup npm start > "$LOG_DIR/client.log" 2>&1 &
+    # Copy environment-specific configuration
+    cp ".env.${ENV}" .env
+    
+    # Start the client with the correct environment
+    if [[ "$ENV" == "production" ]]; then
+        nohup npm run build && npm run preview > "$LOG_DIR/client.log" 2>&1 &
+    else
+        nohup npm start > "$LOG_DIR/client.log" 2>&1 &
+    fi
+    
     CLIENT_PID=$!
     echo $CLIENT_PID > "$PID_DIR/client.pid"
     echo -e "${GREEN}Client started with PID $CLIENT_PID${NC}"
@@ -504,72 +531,124 @@ check_nginx_config() {
     return 0
 }
 
-# Process commands
+# Function to deploy to development
+deploy_dev() {
+    echo -e "${BLUE}Deploying to development environment...${NC}"
+    
+    # Switch to development branch
+    git checkout development
+    git pull origin development
+    
+    # Start development servers
+    ./finwise.sh start development
+    
+    # Reload Nginx to ensure dev subdomain is active
+    ./finwise.sh nginx reload
+    
+    echo -e "${GREEN}Development deployment complete!${NC}"
+    echo -e "Access development site at: http://devfinwise.rerecreation.us"
+}
+
+# Function to deploy to production
+deploy_prod() {
+    echo -e "${BLUE}Deploying to production environment...${NC}"
+    
+    # Switch to main branch
+    git checkout main
+    git pull origin main
+    
+    # Start production servers
+    ./finwise.sh start production
+    
+    # Reload Nginx to ensure production subdomain is active
+    ./finwise.sh nginx reload
+    
+    echo -e "${GREEN}Production deployment complete!${NC}"
+    echo -e "Access production site at: https://finwise.rerecreation.us"
+}
+
+# Main command handling
 case "$1" in
-    start)
+    "start")
         start_server
         start_client
-        sleep 2
         check_status
         ;;
-    stop)
+    "stop")
         stop_client
         stop_server
         ;;
-    restart)
+    "restart")
         stop_client
         stop_server
-        sleep 2
         start_server
         start_client
-        sleep 2
         check_status
         ;;
-    server)
-        start_server
+    "status")
+        check_status
         ;;
-    client)
+    "client")
         start_client
-        ;;
-    status)
         check_status
         ;;
-    logs)
-        if [[ "$2" == "client" || "$2" == "server" ]]; then
-            show_logs "$2"
+    "server")
+        start_server
+        check_status
+        ;;
+    "logs")
+        if [[ "$2" == "client" ]]; then
+            show_logs client
+        elif [[ "$2" == "server" ]]; then
+            show_logs server
         else
             show_logs
         fi
         ;;
-    nginx)
+    "nginx")
         case "$2" in
-            reload)
-                nginx_reload
-                ;;
-            status)
-                nginx_status
-                ;;
-            check)
+            "check")
                 start_nginx
                 ;;
-            check-config)
+            "check-config")
                 check_nginx_config
                 ;;
+            "reload")
+                nginx_reload
+                ;;
+            "status")
+                nginx_status
+                ;;
             *)
-                echo -e "${RED}Error: Unknown nginx command '$2'${NC}"
+                echo -e "${RED}Invalid Nginx command${NC}"
                 show_usage
                 exit 1
                 ;;
         esac
         ;;
-    analyze)
+    "analyze")
         analyze_system
         ;;
-    help|--help|-h)
+    "deploy")
+        case "$2" in
+            "dev")
+                deploy_dev
+                ;;
+            "prod")
+                deploy_prod
+                ;;
+            *)
+                echo -e "${RED}Invalid deployment target${NC}"
+                show_usage
+                exit 1
+                ;;
+        esac
+        ;;
+    "help"|"--help"|"-h"|"")
         show_usage
         ;;
     *)
-        echo -e "${RED}Error: Unknown command '$1'${NC}"
+        echo -e "${RED}Invalid command${NC}"
         show_usage
         exit 1
         ;;

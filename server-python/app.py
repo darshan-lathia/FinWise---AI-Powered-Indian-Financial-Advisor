@@ -8,21 +8,29 @@ import json
 from datetime import datetime
 import pytz
 import logging
+import time
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, 
                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# Load environment variables
-load_dotenv()
+# Load environment variables based on environment
+env = os.getenv('FLASK_ENV', 'development')
+env_file = f'.env.{env}'
+if os.path.exists(env_file):
+    logger.info(f"Loading environment from {env_file}")
+    load_dotenv(env_file)
+else:
+    logger.warning(f"Environment file {env_file} not found, falling back to .env")
+    load_dotenv()
 
 # Configure the Gemini API with your API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 app = Flask(__name__)
 # Enable CORS for all routes with specific settings for better mobile compatibility
-CORS(app, resources={r"/*": {"origins": ["http://localhost:3000", "https://finwise.rerecreation.us", "http://finwise.rerecreation.us"]}})
+CORS(app, resources={r"/*": {"origins": ["http://localhost:3001", "https://finwise.rerecreation.us", "http://finwise.rerecreation.us"]}})
 
 # First, get a detailed response
 DETAILED_PROMPT = """
@@ -124,32 +132,71 @@ def market_data():
     """API endpoint to get current market data"""
     return get_indian_market_data()
 
-@app.route('/chat', methods=['POST'])
+@app.route('/chat', methods=['POST', 'OPTIONS'])
 def chat():
-    """Handle chat requests and return responses with financial context"""
+    """
+    Main chat endpoint that processes requests and returns responses in a standard JSON format
+    with improved error handling and performance.
+    """
+    if request.method == 'OPTIONS':
+        # Handle preflight request
+        response = Response()
+        response.headers.update({
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            'Access-Control-Max-Age': '3600',
+            'Access-Control-Allow-Credentials': 'false'
+        })
+        return response
+
+    request_id = datetime.now().strftime('%Y%m%d-%H%M%S-') + str(id(request))[:8]
     try:
-        # Log client information
-        user_agent = request.headers.get('User-Agent', 'Unknown')
-        origin = request.headers.get('Origin', 'Unknown')
-        content_type = request.headers.get('Content-Type', 'Unknown')
-        logger.info(f"Chat request received - UA: {user_agent}, Origin: {origin}, Content-Type: {content_type}")
+        # Log request details
+        logger.info(f"[{request_id}] New chat request received")
+        
+        # Check if request is from mobile device
+        user_agent = request.headers.get('User-Agent', '').lower()
+        is_mobile = any(device in user_agent for device in ['mobile', 'android', 'iphone', 'ipad', 'ipod'])
+        
+        logger.info(f"[{request_id}] Client IP: {request.remote_addr}, Mobile: {is_mobile}")
+        
+        # Validate input
+        if not request.is_json:
+            logger.error(f"[{request_id}] Invalid request format - not JSON")
+            return jsonify({"error": "Request must be JSON"}), 400
         
         data = request.json
         msg = data.get('chat', '')
         history = data.get('history', [])
         
-        logger.info(f"Processing message: '{msg[:30]}...' with {len(history)} history items")
+        if not msg:
+            logger.error(f"[{request_id}] Empty message received")
+            return jsonify({"error": "Message cannot be empty"}), 400
+        
+        # For mobile, limit input length to reduce processing time
+        if is_mobile and len(msg) > 150:
+            msg = msg[:150]
+            logger.info(f"[{request_id}] Mobile request - truncated long message to 150 chars")
+        
+        logger.info(f"[{request_id}] Message length: {len(msg)}")
+        logger.info(f"[{request_id}] History items: {len(history)}")
 
-        # Convert history to the format expected by the API
-        chat_history = []
-        for item in history:
-            chat_history.append({
-                "role": item["role"],
-                "parts": [{"text": item["parts"][0]["text"]}]
-            })
-
-        # Get market data
-        market_data = get_indian_market_data()
+        # Get market data with error handling
+        try:
+            logger.info(f"[{request_id}] Fetching market data...")
+            market_data = get_indian_market_data()
+            logger.info(f"[{request_id}] Market data fetched successfully")
+        except Exception as market_error:
+            logger.error(f"[{request_id}] Error fetching market data: {str(market_error)}", exc_info=True)
+            # Continue with empty market data rather than failing
+            market_data = {
+                "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "indices": {"nifty50": {"c": "N/A", "percent_change": "N/A"}, "sensex": {"c": "N/A", "percent_change": "N/A"}},
+                "forex": {"usd_inr": "N/A"},
+                "top_gainers": [],
+                "top_losers": []
+            }
 
         # Create context message with market data
         market_context = f"""
@@ -164,26 +211,73 @@ Top Gainers:
 Top Losers:
 {', '.join([f"{l['symbol']}: {l['change_percent']}%" for l in market_data['top_losers']])}
 """
+        logger.info(f"[{request_id}] Market context prepared")
 
-        # First, get detailed response
-        model = genai.GenerativeModel(model_name="gemini-1.5-flash")
-        logger.info("Generating content with Gemini...")
-        detailed_response = model.generate_content(
-            f"{DETAILED_PROMPT}\n\n{market_context}\n\nQuery: {msg}"
-        ).text
-        logger.info(f"Generated response (first 30 chars): {detailed_response[:30]}...")
-
-        resp = jsonify({"text": detailed_response})
-        # Add explicit CORS headers for standard responses
-        resp.headers['Access-Control-Allow-Origin'] = '*'
-        logger.info("Returning JSON response")
-        return resp
+        # Generate response with timeout
+        start_time = time.time()
+        
+        # Set timeout based on device type
+        timeout_seconds = 10 if is_mobile else 25
+        
+        try:
+            logger.info(f"[{request_id}] Initializing Gemini model...")
+            model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+            
+            # Set a more concise response limit for mobile
+            prompt_suffix = "\n\nKeep your response very brief." if is_mobile else ""
+            
+            logger.info(f"[{request_id}] Generating content with Gemini (timeout: {timeout_seconds}s)...")
+            
+            # Use a separate thread with timeout for model generation
+            from concurrent.futures import ThreadPoolExecutor, TimeoutError
+            
+            def generate_response():
+                return model.generate_content(
+                    f"{DETAILED_PROMPT}\n\n{market_context}\n\nQuery: {msg}{prompt_suffix}"
+                ).text
+            
+            with ThreadPoolExecutor() as executor:
+                future = executor.submit(generate_response)
+                try:
+                    detailed_response = future.result(timeout=timeout_seconds)
+                except TimeoutError:
+                    logger.error(f"[{request_id}] Model generation timed out after {timeout_seconds} seconds")
+                    return jsonify({
+                        "error": "Response generation timed out. Please try a shorter question.",
+                        "request_id": request_id
+                    }), 500
+            
+            generation_time = time.time() - start_time
+            logger.info(f"[{request_id}] Generated response in {generation_time:.2f}s, length: {len(detailed_response)}")
+            logger.info(f"[{request_id}] First 100 chars: {detailed_response[:100]}")
+            
+            # For mobile devices, ensure response isn't too long to avoid rendering issues
+            if is_mobile and len(detailed_response) > 1000:
+                detailed_response = detailed_response[:1000] + "...\n\n*Response truncated for mobile.*"
+                logger.info(f"[{request_id}] Truncated long response for mobile device")
+            
+            return jsonify({
+                "text": detailed_response,
+                "request_id": request_id,
+                "timing": {
+                    "total_seconds": generation_time
+                },
+                "device_type": "mobile" if is_mobile else "desktop"
+            }), 200
+            
+        except Exception as model_error:
+            logger.error(f"[{request_id}] Model generation error: {str(model_error)}", exc_info=True)
+            return jsonify({
+                "error": f"Error generating response: {str(model_error)}",
+                "request_id": request_id
+            }), 500
 
     except Exception as e:
-        logger.error(f"Error in chat endpoint: {str(e)}", exc_info=True)
-        resp = jsonify({"error": str(e)})
-        resp.headers['Access-Control-Allow-Origin'] = '*'
-        return resp, 500
+        logger.error(f"[{request_id}] Unhandled error in chat endpoint: {str(e)}", exc_info=True)
+        return jsonify({
+            "error": f"Server error: {str(e)}",
+            "request_id": request_id
+        }), 500
 
 @app.route('/stream', methods=['POST', 'OPTIONS'])
 def stream():
@@ -262,6 +356,7 @@ Top Losers:
                     chunk = detailed_response[i:i + chunk_size]
                     chunks_sent += 1
                     logger.info(f"[{request_id}] Sending chunk {chunks_sent}/{total_chunks}, size: {len(chunk)}")
+                    # Send chunk without adding newline
                     yield chunk
                 
                 logger.info(f"[{request_id}] Stream completed successfully")
@@ -272,7 +367,7 @@ Top Losers:
         logger.info(f"[{request_id}] Setting up response stream...")
         resp = Response(
             stream_with_context(generate()),
-            mimetype='text/plain'
+            mimetype='text/plain; charset=utf-8'
         )
         
         # Add comprehensive CORS and caching headers
@@ -286,7 +381,8 @@ Top Losers:
             'Pragma': 'no-cache',
             'Expires': '0',
             'X-Accel-Buffering': 'no',
-            'Transfer-Encoding': 'chunked'
+            'Transfer-Encoding': 'chunked',
+            'Content-Type': 'text/plain; charset=utf-8'
         })
         
         logger.info(f"[{request_id}] Response headers set: {dict(resp.headers)}")

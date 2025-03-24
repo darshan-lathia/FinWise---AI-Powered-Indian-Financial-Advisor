@@ -1,0 +1,233 @@
+# FinWise Infrastructure Documentation
+
+## Project Overview
+FinWise is an AI-powered financial advisor application specializing in Indian markets. It provides real-time market insights, personalized financial advice, and interactive chat functionality using Google's Gemini 1.5 Flash model.
+
+## Project Structure
+- `client-react/`: Frontend React application
+- `server-python/`: Backend Python server
+- `deployment/`: Deployment-related files
+- `logs/`: Application logs
+- `var/`: Runtime data (PIDs, etc.)
+- `.github/workflows/`: CI/CD configuration
+
+## Environment Setup
+
+### Development Environment
+1. Clone the repository:
+```bash
+git clone https://github.com/darshan-lathia/FinWise---AI-Powered-Indian-Financial-Advisor.git
+cd FinWise---AI-Powered-Indian-Financial-Advisor
+```
+
+2. Switch to development branch:
+```bash
+git checkout development
+```
+
+3. Set up environment files:
+```bash
+cp client-react/.env.development client-react/.env
+cp server-python/.env.development server-python/.env
+```
+
+4. Start the application in development mode:
+```bash
+./finwise.sh start
+```
+
+Development Environment:
+- Development subdomain: devfinwise.rerecreation.us
+- Development ports: Frontend 3001, Backend 9001
+- Production ports: Frontend 3000, Backend 9000
+
+Layout & UI Updates:
+Desktop:
+- Dark mode toggle moved to left sidebar, positioned at bottom with 20px margin
+- No footer frame on desktop view
+- Chat input container is compact with dynamic height:
+  - Min height: 24px
+  - Max height: 120px
+  - Auto-expands based on content
+  - Positioned at bottom with 12px vertical padding
+  - Uses textarea instead of input for multi-line support
+
+Mobile:
+- Fixed header at top (48px height):
+  - Compact design with 8px vertical padding
+  - Logo and dark mode toggle
+  - Background matches theme
+- No footer frame
+- Bottom navigation bar remains
+- Chat input positioned above bottom nav:
+  - Min height: 20px
+  - Max height: 100px
+  - Bottom margin: 60px (to clear navigation)
+  - Padding: 8px 12px
+  - Auto-expands for content
+
+Scrolling & Layout:
+- Improved mobile scrolling with -webkit-overflow-scrolling: touch
+- Smooth scroll behavior enabled
+- Message list adjusts height automatically:
+  - Desktop: calc(100vh - 100px)
+  - Mobile: calc(100vh - 168px)
+  - Top margin on mobile: 48px (header height)
+  - Bottom padding: 80px
+
+Theme Support:
+- Dark mode persists across sessions
+- Dark mode colors:
+  - Background: #121212
+  - Borders: #333
+  - Text: #e6e6e6
+- Light mode colors:
+  - Background: #f9f9f8
+  - Borders: #e0e0e0
+  - Text: #666
+
+Input Features:
+- Enter to send message
+- Shift + Enter for new line
+- Auto-focus on load
+- Placeholder text changes based on context
+- Disabled state during message processing
+
+Navigation:
+- Desktop: Left sidebar with Home, Discover, Spaces
+- Mobile: Bottom navigation with Home, Discover, Spaces, Sign in
+- Logo click resets chat history
+
+### Production Environment
+1. Deploy using the deployment script:
+```bash
+./deploy.sh production
+```
+
+## Development Workflow
+
+### Git Workflow
+1. Always work on feature branches:
+```bash
+git checkout development
+git checkout -b feature/your-feature-name
+```
+
+2. Make your changes and commit:
+```bash
+git add .
+git commit -m "Your descriptive commit message"
+```
+
+3. Push to remote:
+```bash
+git push origin feature/your-feature-name
+```
+
+4. Create a Pull Request to merge into development branch
+5. After testing, merge development into main for production
+
+### Testing
+- Frontend testing:
+```bash
+cd client-react
+npm test               # Run tests once
+npm run test:watch     # Run tests in watch mode
+npm run test:coverage  # Generate coverage report
+```
+
+- Backend testing:
+```bash
+cd server-python
+python -m pytest       # Run tests
+python -m pytest --cov # Generate coverage report
+```
+
+### Docker Development
+Start the complete application using Docker Compose:
+```bash
+docker-compose up -d
+```
+
+## Deployment Options
+
+### Docker Deployment
+```bash
+# Build the Docker image
+docker build -t finwise:production .
+
+# Run the container
+docker run -p 9000:9000 -e GOOGLE_API_KEY=your_key finwise:production
+```
+
+### Traditional Deployment
+```bash
+./deploy.sh production
+```
+
+## Configuration
+
+### Environment Variables
+- Frontend (client-react/.env):
+  - `VITE_API_URL`: Backend API URL
+  - `VITE_ENV`: Environment (development/production)
+
+- Backend (server-python/.env):
+  - `GOOGLE_API_KEY`: Gemini API key
+  - `PORT`: Server port (default: 9000)
+  - `ENV`: Environment (development/production)
+  - `CORS_ORIGINS`: Allowed CORS origins
+  - `DEBUG`: Debug mode (true/false)
+
+## Maintenance
+
+### Logs
+- Access logs:
+```bash
+./finwise.sh logs
+./finwise.sh logs client  # Client logs only
+./finwise.sh logs server  # Server logs only
+```
+
+### Managing the Application
+```bash
+./finwise.sh start    # Start the app
+./finwise.sh stop     # Stop the app
+./finwise.sh restart  # Restart the app
+./finwise.sh status   # Check status
+```
+
+## Portability
+The application is designed to be portable:
+1. All configuration is in environment files
+2. Docker support allows running anywhere Docker is available
+3. The deployment script handles environment setup
+4. CI/CD pipeline ensures consistent builds
+
+## Scaling Considerations
+- Frontend: Can be scaled horizontally behind a load balancer
+- Backend: Stateless design allows for horizontal scaling
+- Database: Consider adding a database for persistent storage
+- Cache: Add Redis for improved performance
+- CDN: Use a CDN for static assets
+
+## Adding a New Website
+To create a new website with the same infrastructure:
+1. Copy the project structure
+2. Update configurations
+3. Customize content and UI
+4. Deploy using the same workflow
+
+## Troubleshooting
+1. Check logs: `./finwise.sh logs`
+2. Verify environment variables
+3. Check Docker status if using containers
+4. Ensure API keys are valid
+5. Check network connectivity between frontend and backend
+
+## Security Considerations
+1. Never commit .env files with real API keys
+2. Use HTTPS in production
+3. Implement rate limiting
+4. Consider adding authentication
+5. Regularly update dependencies 
